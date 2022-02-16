@@ -1,10 +1,11 @@
 const login = (state = {}, action) => {
-    switch(action.type) {
-        case 'login':
-            return {...state, login: {user: action.payload.user}}
-        default:
-            return state;
-    }
-}
+  console.log("REDUCER: action recieved by login reducer: ", action);
+  switch (action.type) {
+    case "login":
+      return { ...state, login: { user: action.payload.username } };
+    default:
+      return state;
+  }
+};
 
-export default login
+export default login;
