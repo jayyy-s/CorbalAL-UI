@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "../App.css";
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import LogIn from "./components/pages/LogIn";
+import Playlist from "./components/pages/Playlist"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         This is a test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <React.StrictMode>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LogIn />} />
+            <Route path="/playlists" element={<Playlist />} />
+          </Routes>
+        </Router>
+      </React.StrictMode>
+    );
+  }
 }
 
 export default App;
