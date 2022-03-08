@@ -7,21 +7,29 @@ import SongInfo from "../SongInfo";
 
 function ArtistPage() {
   return (
-    <div className="app-container">
-      <SideBar />
-      <ul>
-        <SongInfo 
-          songName='where heebo'
-          genre='GENRE??????'
-          playlistPosition='number 1'
-          timeFeatured='65 days' />
-        <SongInfo
-          songName='who heebo'
-          genre='genre.'
-          playlistPosition='9'
-          timeFeatured='2 days' />
-      </ul>
-    </div>
+    <html>    
+      <div className="app-container">
+        <div class="row">
+          <div class="col-md-1">
+            <SideBar />
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <SongInfo 
+                songName='where heebo'
+                genre='GENRE??????'
+                playlistPosition='number 1'
+                timeFeatured='65 days' />
+              <SongInfo
+                songName='who heebo'
+                genre='genre.'
+                playlistPosition='9'
+                timeFeatured='2 days' />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </html>
   );
 }
 
