@@ -17,7 +17,14 @@ function ArtistPage() {
           <div class="col-md-6">
             <ul>
               <UserCard 
-                src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/323/176.jpg'/>
+                src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/323/176.jpg'
+                username='77777777'
+                realName='Jef'
+                age='500'
+                genre='the genre'
+                location='Boston, MA'
+                email='strictly@business.com'
+                phone='111-222-3333' />
               <SongInfo 
                 songName='where heebo'
                 genre='GENRE??????'

@@ -4,6 +4,7 @@
   background-color: rgb(190, 190, 190);
   margin-top: 50px;
   border-radius: 10px;
+  display: grid;
 }
 
 .pfp-container {
@@ -21,4 +22,23 @@ img {
   height: 212px;
   border-radius: 50%;
   object-fit: contain;
+}
+
+.username {
+  margin-left: 200px;
+  margin-top: 40px;
+  font-size: 50px;
+}
+
+.real-name-age {
+  margin-left: 200px;
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.user-detail {
+  margin-left: 200px;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: lighter;
 }
