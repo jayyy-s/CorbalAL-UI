@@ -8,10 +8,14 @@ jobs:
       - image: cimg/node:16.7.0
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - install:
+          command: |
+            cd corbal-react-app
+            npm install
       - run:
-          command: npm run build
+          command: |
+            cd corbal-react-app
+            npm run build
           name: Build app
       - persist_to_workspace:
           root: ~/project
