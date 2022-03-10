@@ -2,7 +2,6 @@ import React from "react";
 import "./css/userCard.css";
 
 function UserCard(props) {
-  
 
   return (
     <div class="UserCard">
