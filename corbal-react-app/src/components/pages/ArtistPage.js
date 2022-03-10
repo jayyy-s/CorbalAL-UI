@@ -4,6 +4,7 @@ import "../css/Artist_page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import SongInfo from "../SongInfo";
+import UserCard from "../UserCard";
 
 function ArtistPage() {
   return (
@@ -15,6 +16,8 @@ function ArtistPage() {
           </div>
           <div class="col-md-6">
             <ul>
+              <UserCard 
+                src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/323/176.jpg'/>
               <SongInfo 
                 songName='where heebo'
                 genre='GENRE??????'
