@@ -36,3 +36,25 @@
   margin-top: 10px;
   margin-left: 10px;
 }
+
+.view-all-link,
+.view-all-link:focus,
+.view-all-link:active {
+  text-decoration: none;
+  font-size: 22px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  color: white;
+  font-size: 12px;
+  border: 3px solid black;
+}
+
+
+.view-all-link:hover {
+  color: var(--main-color);
+}
