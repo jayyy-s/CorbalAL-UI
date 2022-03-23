@@ -33,5 +33,18 @@
 .bid-section {
   display: flex;
   flex-direction: column;
-  
+  flex-grow : 3;
+}
+
+.bids-divider {
+  margin-top: 10px;
+  background-color: #C4C4C4;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+.music-section {
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
 }
