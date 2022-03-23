@@ -2,7 +2,7 @@
 
 .SideBar {
   height: 100%;
-  width: 80px;
+  flex: 1;
   background-color: var(--main-color);
 }
 
@@ -37,6 +37,8 @@
   list-style-type: none;
   width: 46px;
   height: 46px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 50px;
   border-radius: 10px;
 }
