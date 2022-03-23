@@ -27,7 +27,12 @@ function ArtistPage() {
           />
         </div>
         <div className="body-container">
+          <div className="bid-section"> 
           <YourBids numCompleted="10" numPending="10" numUnread="10" />
+          <div class="ml-align" >
+          <div class="bids-divider"></div>
+        </div>
+         <div className="ml-align" >
           <SongInfo
             songName="where heebo"
             genre="GENRE??????"
@@ -40,6 +45,8 @@ function ArtistPage() {
             playlistPosition="9"
             timeFeatured="2 days"
           />
+        </div>
+        </div>
         </div>
       </div>
     </div>

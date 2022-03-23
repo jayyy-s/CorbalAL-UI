@@ -2,9 +2,12 @@
 
 /* For app */
 
+.ml-align{
+  margin-left: 30px;
+}
+
 .app-container {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
@@ -23,4 +26,12 @@
 }
 
 .body-container {
+  display:flex;
+  flex-direction: row;
+}
+
+.bid-section {
+  display: flex;
+  flex-direction: column;
+  
 }

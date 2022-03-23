@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function UserCard(props) {
   return (
-    <div class="UserCard">
+    <div class="UserCard ml-align">
       <div className="profile-container">
         <div className="pfp-container">
           <img src={props.src} alt="where did ur prof pic go xD" />

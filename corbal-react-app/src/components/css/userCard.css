@@ -21,13 +21,13 @@
 .pitch-wrapper {
   width: 30%;
   height: 100%;
-  display: flex;
+  display:flex;
 }
 
 .pitch-container {
   width: 40%;
   height: 50%;
-  margin: auto;
+  margin: auto auto;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -45,7 +45,7 @@
   /* font-family: "Heebo"; */
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
   /* line-height: 22px; */
 }
 .pitch-button-container {
