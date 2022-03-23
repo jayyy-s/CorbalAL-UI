@@ -1,0 +1,45 @@
+.UserCard {
+  height: 299px;
+  width: 1486px;
+  background-color: rgb(190, 190, 190);
+  margin-top: 50px;
+  margin-left: 30px;
+  border-radius: 10px;
+  display: grid;
+}
+
+.pfp-container {
+  background-color: rgb(255, 253, 253);
+  width: 212px;
+  height: 212px;
+  margin-top: 43px;
+  margin-left: 69px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+img {
+  width: 212px;
+  height: 212px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.username {
+  margin-left: 200px;
+  margin-top: 40px;
+  font-size: 50px;
+}
+
+.real-name-age {
+  margin-left: 200px;
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.user-detail {
+  margin-left: 200px;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: lighter;
+}

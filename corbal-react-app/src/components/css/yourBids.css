@@ -1,0 +1,60 @@
+.YourBids {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.your-bids-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bids-divider {
+  margin-top: 10px;
+  background-color: #C4C4C4;
+  width: 956px;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+.view-all-button {
+  background-color: rgb(0, 0, 0);
+  list-style-type: none;
+  width: 120px;
+  height: 23px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  border: 3px solid black;
+  margin-top: 12px;
+  margin-left: -150px;
+  text-align:center;
+}
+
+.bid-analytics {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.view-all-link,
+.view-all-link:focus,
+.view-all-link:active {
+  text-decoration: none;
+  font-size: 22px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  color: white;
+  font-size: 12px;
+  border: 3px solid black;
+}
+
+
+.view-all-link:hover {
+  color: var(--main-color);
+}
