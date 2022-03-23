@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/yourBids.css";
+import "./css/yourMusic.css";
 import { Link } from "react-router-dom";
 
 function YourMusic(props) {
@@ -12,8 +12,8 @@ function YourMusic(props) {
   ];
 
   return (
-    <div class="YourBids ml-align">
-      <div class="your-bids-wrapper">
+    <div class="YourMusic ml-align">
+      <div class="your-music-wrapper">
         <div class="your-bids-text">Your Music</div>
         
           {viewAll.map(({ key, link }) => {

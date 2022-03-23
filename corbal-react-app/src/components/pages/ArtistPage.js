@@ -41,9 +41,9 @@ function ArtistPage() {
                     <div class="bids-divider"></div>
                 </div>
                 <div className="ml-align">
-                    <SongInfo songName="where heebo" genre="GENRE??????" playlistPosition="number 1"
-                        timeFeatured="65 days" />
-                    <SongInfo songName="who heebo" genre="genre." playlistPosition="9" timeFeatured="2 days" />
+                    <SongInfo songName="where heebo" genre="GENRE??????" totalRevenue="$100"
+                        totalListens="65" />
+                    <SongInfo songName="who heebo" genre="genre." totalRevenue="$200" totalListens="25" />
                 </div>
             </div>
         </div>

@@ -9,8 +9,8 @@ function SongInfo(props) {
       <ul>
         <div className="song-name"><b>{props.songName}</b></div>
         <div className="detail"><b>Genre: </b>{props.genre}</div>
-        <div className="detail"><b>Playlist Position: </b>{props.playlistPosition}</div>
-        <div className="detail"><b>Time Featured: </b>{props.timeFeatured}</div>
+        <div className="detail"><b>Total Revenue: </b>{props.totalRevenue}</div>
+        <div className="detail"><b>Total Listens: </b>{props.totalListens}</div>
       </ul>
     </div>
   );
