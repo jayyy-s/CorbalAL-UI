@@ -7,16 +7,32 @@ import { getAuthCode } from "../../scripts/spotifyAuthorization";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+// login script
+import loginAuthentication from "../../scripts/loginAuth";
+
 function LogIn(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
   let navigate = useNavigate();
 
+  /**
+   * Responds to login button
+   * @param {Event} e Submission Event
+   */
   const loginButton = (e) => {
     e.preventDefault(); //prevents reload
-    props.actions.user_login(email);
-    const path = "/artist/home";
-    navigate(path);
+    const response = loginAuthentication(email, password);
+    if (response.error) {
+      setError(true);
+      setErrorMsg(response.error);
+    } else {
+      props.actions.user_login(email);
+      const path = "/artist/home";
+      navigate(path);
+    }
   };
 
   return (
@@ -47,6 +63,7 @@ function LogIn(props) {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
+          {error && <p className="error_msg">{errorMsg}</p>}
           <button
             type="submit"
             className="submit_btn"
