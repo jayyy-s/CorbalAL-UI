@@ -11,6 +11,8 @@ function YourBids(props) {
     }
   ];
 
+  
+
   return (
     <div class="YourBids ml-align">
       <div class="your-bids-wrapper">
