@@ -4,20 +4,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function UserCard(props) {
   return (
-    <div class="UserCard ml-align">
+    <div className="UserCard ml-align">
       <div className="profile-container">
         <div className="pfp-container">
           <img src={props.src} alt="where did ur prof pic go xD" />
         </div>
-        <div class="content-container">
+        <div className="content-container">
           <div className="username">
             <b>{props.username}</b>
           </div>
           <div className="real-name-age">
             {props.realName} ({props.age})
           </div>
-          <div class="user-detail">{props.genre}</div>
-          <div class="user-detail">
+          <div className="user-detail">{props.genre}</div>
+          <div className="user-detail">
             {props.location} | {props.email} | {props.phone}
           </div>
         </div>

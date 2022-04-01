@@ -12,7 +12,6 @@ const loginAuthentication = (email, password) => {
    */
 
   const rand = Math.floor(Math.random() * 4);
-  console.log(rand);
   if (rand === 1) {
     //simulate error
     return {

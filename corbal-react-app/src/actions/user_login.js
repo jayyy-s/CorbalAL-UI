@@ -1,9 +1,7 @@
-export const user_login = (username) => {
-  console.log("ACTION: user logged in", username);
+export const user_login = (userInfo) => {
+  console.log("ACTION: user logged in", userInfo);
   return {
     type: "login",
-    payload: {
-      username,
-    },
+    payload: userInfo,
   };
 };

@@ -18,6 +18,8 @@ function LogIn(props) {
 
   let navigate = useNavigate();
 
+  console.log(props);
+
   /**
    * Responds to login button
    * @param {Event} e Submission Event
@@ -29,7 +31,8 @@ function LogIn(props) {
       setError(true);
       setErrorMsg(response.error);
     } else {
-      props.actions.user_login(email);
+      //adds it to redux
+      props.actions.user_login(response);
       const path = "/artist/home";
       navigate(path);
     }
@@ -79,11 +82,11 @@ function LogIn(props) {
   );
 }
 
-function mapStateToProps(state, props) {
-  return {
-    login: state.login.login,
-  };
-}
+// function mapStateToProps(state) {
+//   return {
+//     //user: state.user,
+//   };
+// }
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -92,4 +95,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 //export default LogIn;
-export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
+export default connect(null, mapDispatchToProps)(LogIn);

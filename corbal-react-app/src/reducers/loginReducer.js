@@ -1,8 +1,9 @@
-const login = (state = {}, action) => {
-  console.log("REDUCER: action recieved by login reducer: ", action);
+const login = (state = { user: null }, action) => {
+  //console.log("REDUCER: action recieved by login reducer: ", action);
   switch (action.type) {
     case "login":
-      return { ...state, login: { user: action.payload.username } };
+      console.log("In reducer with actions: ", action);
+      return { ...state, user: action.payload};
     default:
       return state;
   }
