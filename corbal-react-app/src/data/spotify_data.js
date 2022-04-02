@@ -18,8 +18,7 @@ function fetchSongs() {
         ],
         "uri": "spotify:album:5o9aTepLhqQL2gXuKPhd8g",
         "genres": [
-          "genre 1",
-          "genre 2"
+          "genre 1"
         ]
       },
       {
@@ -39,7 +38,6 @@ function fetchSongs() {
         ],
         "uri": "spotify:album:5o9aTepLhqQL2gXuKPhd8g",
         "genres": [
-          "genre 5",
           "genre ඞ"
         ]
       },
@@ -60,7 +58,6 @@ function fetchSongs() {
         ],
         "uri": "spotify:album:3zl3Qtgdt9tMVqiMa7RaK1",
         "genres": [
-          "losing it",
           "weeee"
         ]
       },

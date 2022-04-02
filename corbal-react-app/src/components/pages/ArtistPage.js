@@ -58,9 +58,9 @@ function ArtistPage(props) {
       <BidInfo
         key={`${song.uri}:${song.name}`}
         songName={song.name}
-        genre={`${song.genres[0]}, ${song.genres[1]}`}
-        playlistPosition="ONE ONE ONE ONE ONE"
-        timeFeatured="none of ur business"
+        genre={`${song.genres[0]}`}
+        playlistPosition="1"
+        timeFeatured="3 days"
       />
     );
     return songBid;

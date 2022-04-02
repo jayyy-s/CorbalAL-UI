@@ -33,7 +33,12 @@ function LogIn(props) {
     } else {
       //adds it to redux
       props.actions.user_login(response);
-      const path = "/artist/home";
+      // if something == artist -> path = /artist/home
+      // if ... curator ... /curator/home
+      
+      // const username = response.username;
+      const isArtist = email === "artist" || email === "WHAT";
+      const path = (isArtist) ? "/artist/home" : "/curator/home";
       navigate(path);
     }
   };
