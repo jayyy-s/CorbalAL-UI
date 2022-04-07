@@ -1,78 +1,97 @@
 import "../css/login.css";
-import react from "react";
+import React from "react";
 import * as LoginActions from "../../actions/user_login";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getAuthCode } from "../../scripts/spotifyAuthorization";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-class LogIn extends react.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: "",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+// login script
+import loginAuthentication from "../../scripts/loginAuth";
 
-  handleSubmit(event) {
-    console.log(event);
-    this.props.actions.user_login(event.target.value);
-    console.log(this.props.username);
-  }
+function LogIn(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  render() {
-    return (
-      <div className="login-main-container">
-        <nav className="navbar navbar-light bg-light">
-          <div className="container-fluid">
-            <span className="navbar-brand mb-0 h1">Navbar</span>
-            <button
-              className="btn btn-success"
-              onClick={() => {
-                console.log("clicked");
-                getAuthCode();
-              }}
-            >
-              SPOTIFY
-            </button>
-          </div>
-        </nav>
-        <div className="login">
-          <form className="login_form">
-            <h1>Login</h1>
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={(e) => this.setState({ email: e.target.value })}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => this.setState({ password: e.target.value })}
-            />
-            <button
-              type="submit"
-              className="submit_btn"
-              onClick={(e) => {
-                e.preventDefault(); //prevents reload
-                this.props.actions.user_login(this.state.email);
-              }}
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    );
-  }
-}
+  let navigate = useNavigate();
 
-function mapStateToProps(state, props) {
-  return {
-    login: state.login.login,
+  console.log(props);
+
+  /**
+   * Responds to login button
+   * @param {Event} e Submission Event
+   */
+  const loginButton = (e) => {
+    e.preventDefault(); //prevents reload
+    const response = loginAuthentication(email, password);
+    if (response.error) {
+      setError(true);
+      setErrorMsg(response.error);
+    } else {
+      //adds it to redux
+      props.actions.user_login(response);
+      // if something == artist -> path = /artist/home
+      // if ... curator ... /curator/home
+      
+      // const username = response.username;
+      const isArtist = email === "artist" || email === "WHAT";
+      const path = (isArtist) ? "/artist/home" : "/curator/home";
+      navigate(path);
+    }
   };
+
+  return (
+    <div className="login-main-container">
+      <nav className="navbar navbar-light bg-light">
+        <div className="container-fluid">
+          <span className="navbar-brand mb-0 h1">Navbar</span>
+          <button
+            className="btn btn-success"
+            onClick={() => {
+              getAuthCode();
+            }}
+          >
+            SPOTIFY
+          </button>
+        </div>
+      </nav>
+      <div className="login">
+        <form className="login_form">
+          <h1>Login</h1>
+          <input
+            type="email"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {error && <p className="error_msg">{errorMsg}</p>}
+          <button
+            type="submit"
+            className="submit_btn"
+            onClick={(e) => {
+              loginButton(e);
+            }}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
+
+// function mapStateToProps(state) {
+//   return {
+//     //user: state.user,
+//   };
+// }
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -81,4 +100,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 //export default LogIn;
-export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
+export default connect(null, mapDispatchToProps)(LogIn);

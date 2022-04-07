@@ -1,0 +1,21 @@
+.BidInfo {
+  height: 188px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 6px 0px rgba(75, 81, 91, 0.5);
+  margin-top: 16px;
+}
+
+.song-name {
+  font-size: 22px;
+  padding-top: 20px;
+}
+
+.detail {
+  padding-left: 20px;
+  padding-top: 8px;
+  font-size: 18px;
+}

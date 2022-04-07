@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import LogIn from "./components/pages/LogIn";
 
 import { Provider } from "react-redux";
 import Store from "./store";
+import App from "./App";
 
 const StoreInstance = Store();
 
 ReactDOM.render(
   <Provider store={StoreInstance}>
     <React.StrictMode>
-      <LogIn />
+      <App />
     </React.StrictMode>
   </Provider>,
   document.getElementById("root")
