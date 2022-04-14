@@ -1,0 +1,110 @@
+{
+    "tracks": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+              },
+              "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+              "id": "0TnOYISbd1XYRBk9myaseg",
+              "name": "Pitbull",
+              "type": "artist",
+              "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4rG0MhkU6UojACJxkMHIXB"
+          },
+          "href": "https://api.spotify.com/v1/albums/4rG0MhkU6UojACJxkMHIXB",
+          "id": "4rG0MhkU6UojACJxkMHIXB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2731dc7483a9fcfce54822a2f19",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e021dc7483a9fcfce54822a2f19",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048511dc7483a9fcfce54822a2f19",
+              "width": 64
+            }
+          ],
+          "name": "Planet Pit (Deluxe Version)",
+          "release_date": "2011-06-17",
+          "release_date_precision": "day",
+          "total_tracks": 16,
+          "type": "album",
+          "uri": "spotify:album:4rG0MhkU6UojACJxkMHIXB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj"
+            },
+            "href": "https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj",
+            "id": "21E3waRsmPlU7jZsS13rcj",
+            "name": "Ne-Yo",
+            "type": "artist",
+            "uri": "spotify:artist:21E3waRsmPlU7jZsS13rcj"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4D75GcNG95ebPtNvoNVXhz"
+            },
+            "href": "https://api.spotify.com/v1/artists/4D75GcNG95ebPtNvoNVXhz",
+            "id": "4D75GcNG95ebPtNvoNVXhz",
+            "name": "Afrojack",
+            "type": "artist",
+            "uri": "spotify:artist:4D75GcNG95ebPtNvoNVXhz"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1ruutHJcECI7cos2n5TqpO"
+            },
+            "href": "https://api.spotify.com/v1/artists/1ruutHJcECI7cos2n5TqpO",
+            "id": "1ruutHJcECI7cos2n5TqpO",
+            "name": "Nayer",
+            "type": "artist",
+            "uri": "spotify:artist:1ruutHJcECI7cos2n5TqpO"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 252306,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USJAY1100032"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4QNpBfC0zvjKqPJcyqBy9W",
+        "id": "4QNpBfC0zvjKqPJcyqBy9W",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Give Me Everything (feat. Ne-Yo, Afrojack & Nayer)",
+        "popularity": 83,
+        "preview_url": "https://p.scdn.co/mp3-preview/bc3ab974555f9136cdbc25a003b55f93ca4b3c78?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:4QNpBfC0zvjKqPJcyqBy9W"
+      }
+    ]
+  }

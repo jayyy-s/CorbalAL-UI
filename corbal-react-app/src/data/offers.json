@@ -1,0 +1,13 @@
+{
+    "offers": [
+        {
+            "id":1,
+            "curator_id" : 1,
+            "song_id" : "0TnOYISbd1XYRBk9myaseg",
+            "no_of_tracks_playlist" : 100,
+            "no_of_followers": 123,
+            "playlist_spot":1,
+            "price":300 
+        }
+    ]
+}

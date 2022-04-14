@@ -1,4 +1,6 @@
 //import axios from "axios";
+import {fetchUser} from '../store/user-slice';
+
 
 /**
  * Calls the backend to authenticate user and returns
@@ -10,7 +12,6 @@ const loginAuthentication = (email, password) => {
   /**
    * This is where I would call the api
    */
-
   const rand = Math.floor(Math.random() * 4);
   if (rand === 1) {
     //simulate error
