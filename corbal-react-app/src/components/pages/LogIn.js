@@ -47,9 +47,6 @@ function LogIn(props) {
     }
   }, [user])
 
-
-  console.log(props);
-
   /**
    * Responds to login button
    * @param {Event} e Submission Event

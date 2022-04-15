@@ -19,14 +19,14 @@ const artistOffersSlice = createSlice({
             state.noOfPendingOffers = 0;
 
 
-            state.items = action.payload.offers;
+            state.offers = action.payload.offers;
         }
     }
 });
 
 export const artistOffersActions = artistOffersSlice.actions;
 
-export const fetchArtistOffers = () => {
+export const fetchArtistOffers = (artistId) => {
     return async (dispatch) => {
 
         //GET Request
@@ -42,7 +42,9 @@ export const fetchArtistOffers = () => {
         };
 
         try {
-            const offers = await getOffersRequest();
+            const data = await getOffersRequest();
+            
+            const offers = data.filter(offer =>offer.artist_id===artistId);
 
             dispatch(
                 artistOffersActions.fetchArtistOffers({

@@ -14,7 +14,13 @@ const userSlice = createSlice({
             username: "",
             password: "",
             spotify_uri: "",
-            is_artist: false
+            is_artist: false,
+            firstName: "Test firstname",
+            lastName: "Test lastname",
+            age: 25,
+            location : "Boston, MA",
+            email : "artist@example.com",
+            phone: "12345689"
           }
     },
     reducers: {

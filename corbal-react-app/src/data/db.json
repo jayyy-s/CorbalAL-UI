@@ -111,12 +111,40 @@
         {
             "id":1,
             "curator_id" : 1,
+            "artist_id" :1,
             "song_id" : "0TnOYISbd1XYRBk9myaseg",
+            "song_name" : "Song 1",
             "no_of_tracks_playlist" : 100,
             "no_of_followers": 123,
             "playlist_spot":1,
-            "price":300 
-        }
+            "price":300 ,
+            "days_featured":5
+        },
+        {
+          "id":2,
+          "curator_id" : 1,
+          "artist_id" :1,
+          "song_id" : "0TnOYISbd1XYRBk9myaseg",
+          "song_name" : "Song 2",
+          "no_of_tracks_playlist" : 100,
+          "no_of_followers": 123,
+          "playlist_spot":1,
+          "price":300 ,
+          "days_featured":5
+      },
+      {
+        "id":3,
+        "curator_id" : 1,
+        "artist_id" :1,
+        "song_id" : "0TnOYISbd1XYRBk9myaseg",
+        "song_name" : "Song 3",
+        "no_of_tracks_playlist" : 100,
+        "no_of_followers": 123,
+        "playlist_spot":1,
+        "price":300 ,
+        "days_featured":5
+    }
+
     ],
     "placements": [
         {
@@ -144,18 +172,30 @@
     ],
     "users": [
       {
-        "_id": "1",
+        "id": 1,
         "username": "artist@example.com",
         "password": "1234",
         "spotify_uri": "",
-        "is_artist": "true"
+        "is_artist": true,
+        "firstName": "Jason",
+        "lastName" : "Paul",
+        "age" : 25,
+        "location" : "Boston",
+        "email" : "artist@example.com",
+        "phone": "12345689"
       },
       {
-        "_id": "2",
+        "id": 2,
         "username": "curator@example.com",
         "password": "1234",
-        "spotifyuri": "",
-        "isartist": "false"
+        "spotify_uri": "",
+        "is_artist": false,
+        "firstName": "Jason",
+        "lastName" : "Paul",
+        "age" : 25,
+        "location" : "Boston",
+        "email" : "curator@example.com",
+        "phone": "12345689"
       },
       {
         "id": "3",
@@ -164,5 +204,92 @@
         "spotifyuri": "",
         "isartist": "false"
       }
-    ]
+    ],
+    "bids": [
+      {
+          "id":1,
+          "curator_id" : 2,
+          "artist_id" :1,
+          "song_id" : "0TnOYISbd1XYRBk9myaseg",
+          "song_name" : "Song 1",
+          "no_of_tracks_playlist" : 100,
+          "no_of_followers": 123,
+          "playlist_spot":1,
+          "price":300 ,
+          "days_featured":5
+      },
+      {
+        "id":2,
+        "curator_id" : 2,
+        "artist_id" :1,
+        "song_id" : "0TnOYISbd1XYRBk9myaseg",
+        "song_name" : "Song 2",
+        "no_of_tracks_playlist" : 100,
+        "no_of_followers": 123,
+        "playlist_spot":1,
+        "price":300 ,
+        "days_featured":5
+    },
+    {
+      "id":3,
+      "curator_id" : 2,
+      "artist_id" :1,
+      "song_id" : "0TnOYISbd1XYRBk9myaseg",
+      "song_name" : "Song 3",
+      "no_of_tracks_playlist" : 100,
+      "no_of_followers": 123,
+      "playlist_spot":1,
+      "price":300 ,
+      "days_featured":5
+  }
+
+  ],
+  "playlists": [
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/47s8Pj6MjV5UWYEaHIe9ZH"
+      },
+      "href": "https://api.spotify.com/v1/playlists/47s8Pj6MjV5UWYEaHIe9ZH",
+      "id": "47s8Pj6MjV5UWYEaHIe9ZH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273ba4c798ab356b8adb64bb2fcab67616d0000b273cb8d1acbf1184d3b7b268747ab67616d0000b273dbe9c4609ec382dcc0391e62",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273ba4c798ab356b8adb64bb2fcab67616d0000b273cb8d1acbf1184d3b7b268747ab67616d0000b273dbe9c4609ec382dcc0391e62",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273ba4c798ab356b8adb64bb2fcab67616d0000b273cb8d1acbf1184d3b7b268747ab67616d0000b273dbe9c4609ec382dcc0391e62",
+          "width": 60
+        }
+      ],
+      "name": "Dance I Said",
+      "owner": {
+        "display_name": "Michelle Kadir",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/michellekadir"
+        },
+        "href": "https://api.spotify.com/v1/users/michellekadir",
+        "id": "michellekadir",
+        "type": "user",
+        "uri": "spotify:user:michellekadir"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "NjU1LGViYzk5YWViYWVmNmExN2ViMWZiOTEwMDVlM2YwZTg2ZTA4Y2FmNDA=",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/47s8Pj6MjV5UWYEaHIe9ZH/tracks",
+        "total": 106
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:47s8Pj6MjV5UWYEaHIe9ZH"
+    }
+  ]
 }
