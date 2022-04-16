@@ -28,15 +28,9 @@ function ArtistPage(props) {
   const tracks = useSelector((state)=> state.artistTracks.tracks);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    //calling the offers endpoint 
-    dispatch(fetchArtistOffers(user.id));
-    dispatch(fetchArtistTracks(user.id))
-  },[]);
-
 
   useEffect(() => {
-    //calling the offers endpoint 
+    //calling the offers and tracks endpoint 
     dispatch(fetchArtistOffers(user.id));
     dispatch(fetchArtistTracks(user.id))
 

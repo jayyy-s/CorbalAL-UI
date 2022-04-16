@@ -28,7 +28,7 @@ function CuratorPage(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    //call the api
+    //call the bids and playlists endpoint
     dispatch(fetchCuratorBids(user.id));
     dispatch(fetchCuratorPlaylists(user.id));
   },[user]);

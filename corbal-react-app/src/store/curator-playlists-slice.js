@@ -19,14 +19,17 @@ const curatorPlaylistsSlice = createSlice({
 
 export const curatorPlaylistsActions = curatorPlaylistsSlice.actions;
 
-//ACTUAL SCENARIO
-//1. Pass curatorSpotifyId
-//2. Get a response object consisting of user playlists
-//3.
+//CURRENT SCENARIO
+//1. Fetching ALL playlists from our db.
+//IDEAL SCENARIO
+//1. Hit an endpoint like '/playlists/:curatorSpotifyId'.
+//2. Get a response object consisting of ONLY the curator's playlists.
 export const fetchCuratorPlaylists = (curatorSpotifyId) => {
     return async (dispatch) => {
 
         //GET Request
+        //Currently we are getting all the playlists.
+        //Ideally we will be sending a request to '/playlists?curatorSpotifyId=1' to obtain only the curator's playlists.
         const getPlaylistsRequest = async () => {
             const response = await fetch(
                 `${endPoint}/playlists`

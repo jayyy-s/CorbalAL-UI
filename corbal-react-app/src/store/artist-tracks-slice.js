@@ -19,14 +19,17 @@ const artistTracksSlice = createSlice({
 
 export const artistTracksActions = artistTracksSlice.actions;
 
-//ACTUAL SCENARIO
-//1. Pass artistSpotifyId
-//2. Get a response object consisting of user tracks
-//3.
+//CURRENT SCENARIO
+//1. Fetching ALL tracks from our db.
+//IDEAL SCENARIO
+//1. Hit an endpoint like '/tracks/:artistSpotifyId'.
+//2. Get a response object consisting of ONLY the artist tracks.
 export const fetchArtistTracks = (artistSpotifyId) => {
     return async (dispatch) => {
 
         //GET Request
+        //Currently we are getting all the tracks.
+        //Ideally we will be sending a request to '/tracks?artistId=1' to obtain only the artist's tracks.
         const getTracksRequest = async () => {
             const response = await fetch(
                 `${endPoint}/tracks`
