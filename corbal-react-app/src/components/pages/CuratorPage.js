@@ -9,16 +9,29 @@ import YourBids from "../YourBids";
 import YourPlaylists from "../YourPlaylists";
 import fetchSongs from "../../data/spotify_data";
 import * as LoginActions from "../../actions/user_login";
+import {
+  useSelector,
+  useDispatch
+} from 'react-redux';
+import {fetchCuratorBids} from '../../store/curator-bids-slice';
+import {fetchCuratorPlaylists} from '../../store/curator-playlists-slice';
 
 import "../css/curator_page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function CuratorPage(props) {
+  
+  const user = useSelector((state)=> state.user.user);
+  const bids = useSelector((state)=> state.curatorBids.bids);
+  const playlists = useSelector((state)=> state.curatorPlaylists.playlists)
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    //call the api
-    //   const response = loginAuthentication(email, password);
-  });
+    //call the bids and playlists endpoint
+    dispatch(fetchCuratorBids(user.id));
+    dispatch(fetchCuratorPlaylists(user.id));
+  },[user]);
 
   /**
    * Pulls information from redux store to create userCard
@@ -28,16 +41,16 @@ function CuratorPage(props) {
     return (
       <CuratorCard
         src={
-          props.user.img ||
+          user.img ||
           "https://i.kym-cdn.com/photos/images/newsfeed/002/205/323/176.jpg"
         }
-        username={props.user.username}
-        realName={props.user.firstName + " " + props.user.lastName}
-        age={props.user.age}
-        genre={props.user.genre}
-        location={props.user.city}
-        email={props.user.email}
-        phone={props.user.phone}
+        username={user.username}
+        realName={user.firstName + " " + user.lastName}
+        age={user.age}
+        genre={user.genre}
+        location={user.city}
+        email={user.email}
+        phone={user.phone}
       />
     );
   };
@@ -53,19 +66,28 @@ function CuratorPage(props) {
 
   // think it would be good if .tracks wasn't used here
   const songs = fetchSongs().tracks;
-  const songBids = [...songs].map((song) => {
+  const songBids = bids.map((bid) => {
     const songBid = (
       <BidInfo
-        key={`${song.uri}:${song.name}`}
-        songName={song.name}
-         genre={`${song.genres[0]}`}
-        // genre='test'
-        playlistPosition="1"
-        timeFeatured="3 days"
+        key={`${bid.song_id}:${bid.song_name}`}
+        songName={bid.song_name}
+        // genre={`${song.genres[0]}`}
+        playlistPosition={bid.playlist_spot}
+        timeFeatured={bid.days_featured}
       />
     );
     return songBid;
   });
+
+  const yourPlaylists=playlists.map((playlist)=>{
+    return (<PlaylistInfo
+      playlistName={playlist.name}
+      genre="GENRE??????"
+      totalRevenue="$2 (xD)"
+      rank="5"
+      noOfTracks={playlist.tracks.total}
+    />)
+  })
   
   return (
     <div className="app-container">
@@ -92,18 +114,7 @@ function CuratorPage(props) {
               <div class="bids-divider"></div>
             </div>
             <div className="ml-align">
-              <PlaylistInfo
-                playlistName="O____________O"
-                genre="GENRE??????"
-                totalRevenue="$2 (xD)"
-                rank="5"
-              />
-              <PlaylistInfo
-                songName=":OOOOOOOO"
-                genre="genre."
-                totalRevenue="nunya"
-                rank="nunya"
-              />
+              {yourPlaylists}
             </div>
           </div>
         </div>
@@ -118,11 +129,11 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.login.user,
-  };
-}
+// function mapStateToProps(state) {
+//   return {
+//     user: state.login.user,
+//   };
+// }
 
-//export default LogIn;
-export default connect(mapStateToProps, mapDispatchToProps)(CuratorPage);
+export default CuratorPage;
+// export default connect(mapStateToProps, mapDispatchToProps)(CuratorPage);

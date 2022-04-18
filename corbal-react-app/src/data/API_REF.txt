@@ -1,0 +1,3 @@
+tracks.json - GET ARTIST TOP TRACKS - https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-top-tracks
+albums.json - GET ARTIST ALBUMS - https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-albums
+album_tracks.json - GET ALBUM TRACKS - https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-albums-tracks

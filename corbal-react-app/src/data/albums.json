@@ -1,0 +1,58 @@
+ {
+    "albums": [
+        {
+            "album_group": "single",
+            "album_type": "single",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+                },
+                "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+                "id": "0TnOYISbd1XYRBk9myaseg",
+                "name": "Pitbull",
+                "type": "artist",
+                "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/6cEuCEZu7PAE9ZSzLLc2oQ"
+                },
+                "href": "https://api.spotify.com/v1/artists/6cEuCEZu7PAE9ZSzLLc2oQ",
+                "id": "6cEuCEZu7PAE9ZSzLLc2oQ",
+                "name": "R3HAB",
+                "type": "artist",
+                "uri": "spotify:artist:6cEuCEZu7PAE9ZSzLLc2oQ"
+              }
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/0bGTfamwl2XVCrXcWAhx6P"
+            },
+            "href": "https://api.spotify.com/v1/albums/0bGTfamwl2XVCrXcWAhx6P",
+            "id": "0bGTfamwl2XVCrXcWAhx6P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27384350887413bc1c96aa1fe9b",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0284350887413bc1c96aa1fe9b",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485184350887413bc1c96aa1fe9b",
+                "width": 64
+              }
+            ],
+            "name": "I Feel Good (R3HAB Remix)",
+            "release_date": "2021-12-03",
+            "release_date_precision": "day",
+            "total_tracks": 2,
+            "type": "album",
+            "uri": "spotify:album:0bGTfamwl2XVCrXcWAhx6P"
+          }
+    ]
+  }

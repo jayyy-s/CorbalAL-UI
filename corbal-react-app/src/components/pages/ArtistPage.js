@@ -9,16 +9,32 @@ import YourBids from "../YourBids";
 import YourMusic from "../YourMusic";
 import fetchSongs from "../../data/spotify_data";
 import * as LoginActions from "../../actions/user_login";
+import {
+  useSelector,
+  useDispatch
+} from 'react-redux';
+
+import {fetchArtistOffers} from '../../store/artist-offers-slice';
+import {fetchArtistTracks} from '../../store/artist-tracks-slice';
 
 import "../css/Artist_page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function ArtistPage(props) {
+ 
+  const user = useSelector((state)=> state.user.user);
+  const offers = useSelector((state)=> state.artistOffers.offers);
+  const tracks = useSelector((state)=> state.artistTracks.tracks);
+  const dispatch = useDispatch();
+
+
   useEffect(() => {
-    //call the api
-    //   const response = loginAuthentication(email, password);
-  });
+    //calling the offers and tracks endpoint 
+    dispatch(fetchArtistOffers(user.id));
+    dispatch(fetchArtistTracks(user.id))
+
+  },[user]);
 
   /**
    * Pulls information from redux store to create userCard
@@ -28,16 +44,16 @@ function ArtistPage(props) {
     return (
       <UserCard
         src={
-          props.user.img ||
+          user.img ||
           "https://i.kym-cdn.com/photos/images/newsfeed/002/205/323/176.jpg"
         }
-        username={props.user.username}
-        realName={props.user.firstName + " " + props.user.lastName}
-        age={props.user.age}
-        genre={props.user.genre}
-        location={props.user.city}
-        email={props.user.email}
-        phone={props.user.phone}
+        username={user.username}
+        realName={user.firstName + " " + user.lastName}
+        age={user.age}
+        genre={user.genre}
+        location={user.city}
+        email={user.email}
+        phone={user.phone}
       />
     );
   };
@@ -53,18 +69,43 @@ function ArtistPage(props) {
 
   // think it would be good if .tracks wasn't used here
   const songs = fetchSongs().tracks;
-  const songBids = [...songs].map((song) => {
+  
+  // const songBids = [...songs].map((song) => {
+  //   const songBid = (
+  //     <BidInfo
+  //       key={`${song.uri}:${song.name}`}
+  //       songName={song.name}
+  //       genre={`${song.genres[0]}`}
+  //       playlistPosition="1"
+  //       timeFeatured="3 days"
+  //     />
+  //   );
+  //   return songBid;
+  // });
+
+    const songBids = offers.map((offer) => {
     const songBid = (
       <BidInfo
-        key={`${song.uri}:${song.name}`}
-        songName={song.name}
-        genre={`${song.genres[0]}`}
-        playlistPosition="1"
-        timeFeatured="3 days"
+        key={`${offer.song_id}:${offer.song_name}`}
+        songName={offer.song_name}
+        // genre={`${song.genres[0]}`}
+        playlistPosition={offer.playlist_spot}
+        timeFeatured={offer.days_featured}
       />
     );
     return songBid;
   });
+
+  const yourMusic=tracks.map((track)=>{
+    return ( <SongInfo
+      songName={track.name}
+      popularity={track.popularity}
+      genre="GENRE??????"
+      totalRevenue="$100"
+      totalListens="65"
+    />)
+  })
+  
 
   console.log("I'm in artist: ", props);
 
@@ -92,19 +133,9 @@ function ArtistPage(props) {
             <div className="ml-align">
               <div class="bids-divider"></div>
             </div>
-            <div className="ml-align">
-              <SongInfo
-                songName="where heebo"
-                genre="GENRE??????"
-                totalRevenue="$100"
-                totalListens="65"
-              />
-              <SongInfo
-                songName="who heebo"
-                genre="genre."
-                totalRevenue="$200"
-                totalListens="25"
-              />
+            <div className="ml-align">{
+              yourMusic
+            }
             </div>
           </div>
         </div>
@@ -125,5 +156,5 @@ function mapStateToProps(state) {
   };
 }
 
-//export default LogIn;
-export default connect(mapStateToProps, mapDispatchToProps)(ArtistPage);
+export default ArtistPage;
+//export default connect(mapStateToProps, mapDispatchToProps)(ArtistPage);

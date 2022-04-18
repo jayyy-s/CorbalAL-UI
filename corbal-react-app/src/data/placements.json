@@ -1,0 +1,12 @@
+{
+    "placements": [
+        {
+            "_id":1,
+            "pitch_id" : 1,
+            "song_id" : "0TnOYISbd1XYRBk9myaseg",
+            "bid_id" : 1,
+            "status": "In Progress",
+            "timestamp": "2022-04-10T14:48:00.000Z"
+        }
+    ]
+}
