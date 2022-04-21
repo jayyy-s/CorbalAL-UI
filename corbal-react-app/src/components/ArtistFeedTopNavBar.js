@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function ArtistFeedTopNavBar(props){
    return( 
+       <>
    <nav>
         <ul className={classes.list}>
             <li>
@@ -17,6 +18,8 @@ function ArtistFeedTopNavBar(props){
             </li>
         </ul>
     </nav>
+    <div className={classes.divider}></div>
+    </>
    )
 }
 

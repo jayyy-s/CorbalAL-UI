@@ -11,7 +11,7 @@ function SortControl(props) {
     })
 
     return (
-        <div className="sortContainer">
+        <div className={classes.sortContainer}>
             <label>Sort By</label>
             <select>
                 {options}

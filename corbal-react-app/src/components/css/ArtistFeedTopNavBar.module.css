@@ -1,5 +1,5 @@
 nav{
-    margin: 2rem 1rem;
+    margin: 2rem 1rem 0rem 1rem;
 }
 
 .list{
@@ -14,8 +14,19 @@ ul li{
     margin: 0rem 0.5rem;
 }
 
+.list a{
+ text-decoration: none;
+}
+
 ul a.active{
     color: #95bcf0;
     padding-bottom: 0.25rem;
     border-bottom: 4px solid #95bcf0;
+}
+
+.divider{
+    height:1px;
+    background-color: #C4C4C4;
+    width: 75%;
+    margin-left:1rem;
 }

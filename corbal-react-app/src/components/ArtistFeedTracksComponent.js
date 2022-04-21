@@ -4,7 +4,7 @@ import TrackCard from './ArtistFeedTrackCard';
 function ArtistFeedTracksComponent(props){
     
     const trackCards = props.tracks.map((track) => { return(
-        <TrackCard />
+        <TrackCard imageUrl={track.album.images[0].url} trackName={track.name} preview_url={track.preview_url} duration_ms={track.duration_ms} />
     )
     })  
 

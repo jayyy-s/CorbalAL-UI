@@ -1,3 +1,13 @@
 .sortContainer{
-    display: flex
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+}
+
+.sortContainer label{
+    font-size:small;
+}
+
+.sortContainer select{
+    font-size:small;
 }

@@ -1,11 +1,12 @@
 .artistFeedOffersContainer{
     display:flex;
     flex-direction: row;
+    height:100vh;
 }
 
 .sideBarContainer{
     height: 100%;
-    flex: 1;
+    flex-basis: 60px;
     background-color: var(--main-color);
 }
 
