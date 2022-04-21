@@ -1,0 +1,21 @@
+nav{
+    margin: 2rem 1rem;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    width : 80%;
+    padding: 0rem;
+}
+
+ul li{
+    margin: 0rem 0.5rem;
+}
+
+ul a.active{
+    color: #95bcf0;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid #95bcf0;
+}

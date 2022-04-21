@@ -1,0 +1,16 @@
+.artistFeedOffersContainer{
+    display:flex;
+    flex-direction: row;
+}
+
+.sideBarContainer{
+    height: 100%;
+    flex: 1;
+    background-color: var(--main-color);
+}
+
+.artistFeedOffersMainContainer{
+    display:flex;
+    flex-direction: column;
+    flex: 3;
+}

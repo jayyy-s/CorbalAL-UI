@@ -1,0 +1,20 @@
+.artistFeedTracksContainer{
+    display:flex;
+    flex-direction: row;
+}
+
+.sideBarContainer{
+    height: 100%;
+    flex-basis: 60px;
+    background-color: var(--main-color);
+}
+
+.artistFeedTracksMainContainer{
+    display:flex;
+    flex-direction: column;
+    flex:3;
+}
+
+.ml_1 {
+    margin-left: 1rem;
+}
