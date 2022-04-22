@@ -10,7 +10,7 @@ function SideBar() {
       link: "/",
     },
     {
-      key: "home",
+      key: "feed",
       icon: <i className="bi bi-person"></i>,
       link: "/artist/tracks",
     },
