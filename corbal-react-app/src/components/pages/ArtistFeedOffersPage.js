@@ -34,7 +34,7 @@ function ArtistFeedOffersPage(props) {
     }
 
     const getCompletedOffers=()=>{
-        return  artistOffers.filter((offer) => offer.status !== 'Completed')
+        return  artistOffers.filter((offer) => offer.status === 'Completed')
       }
 
     //NEEDS TO BE REMOVED
@@ -70,9 +70,19 @@ function ArtistFeedOffersPage(props) {
                     <SearchBar id="search-bids" placeholder="Search for Bid" label="Search for Bid" onSearchInputChange={handleSearchInputChange} />
                 </div>
 
+                <div className={`${classes.ml_1}`}>
+                    Pending
+                </div>
+                <div className={classes.divider}></div>
+
                 <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
                     <OffersComponent offers={offersPending} />
                 </div>
+
+                <div className={`${classes.ml_1}`}>
+                    Completed
+                </div>
+                <div className={classes.divider}></div>
 
                 <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
                     <OffersComponent offers={offersCompleted} />

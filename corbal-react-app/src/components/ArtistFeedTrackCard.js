@@ -4,7 +4,7 @@ function ArtistFeedTrackCard(props) {
 
     return (<div className={classes.card}>
         <div className={classes.cardImage}>
-            <img src={props.imageUrl} />
+            <img className={classes.image} src={props.imageUrl} />
             <button className={classes.playButton}>
                 <i className={`bi bi-play-btn `}></i>
             </button>
@@ -12,7 +12,7 @@ function ArtistFeedTrackCard(props) {
         <div className={classes.duration}>
             {props.duration_ms}
         </div>
-        <div>
+        <div className={classes.trackName}>
             {props.trackName}
         </div>
     </div>
