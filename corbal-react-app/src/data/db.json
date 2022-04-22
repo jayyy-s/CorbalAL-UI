@@ -852,8 +852,8 @@
       "no_of_tracks_playlist": 100,
       "no_of_followers": 123,
       "playlist_spot": 1,
-      "price": 300,
-      "days_featured": 5,
+      "price": 400,
+      "days_featured": 1,
       "status" : "Completed"
     },
     {
@@ -866,7 +866,7 @@
       "no_of_tracks_playlist": 100,
       "no_of_followers": 123,
       "playlist_spot": 1,
-      "price": 300,
+      "price": 200,
       "days_featured": 5,
       "status" : "Pending"
     },

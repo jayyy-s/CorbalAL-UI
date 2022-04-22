@@ -4,7 +4,7 @@ function SortControl(props) {
 
     const options = props.options.map((option) => {
         return (
-            <option key={option.option} value={option.option}>
+            <option key={option.option} value={option.value}>
                 {option.option}
             </option>
         )

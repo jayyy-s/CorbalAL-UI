@@ -70,22 +70,13 @@ function ArtistFeedOffersPage(props) {
                     <SearchBar id="search-bids" placeholder="Search for Bid" label="Search for Bid" onSearchInputChange={handleSearchInputChange} />
                 </div>
 
-                <div className={`${classes.ml_1}`}>
-                    Pending
+                <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
+                    <OffersComponent offers={offersPending} title="Pending" />
                 </div>
-                <div className={classes.divider}></div>
+
 
                 <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
-                    <OffersComponent offers={offersPending} />
-                </div>
-
-                <div className={`${classes.ml_1}`}>
-                    Completed
-                </div>
-                <div className={classes.divider}></div>
-
-                <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
-                    <OffersComponent offers={offersCompleted} />
+                    <OffersComponent offers={offersCompleted} title="Completed" />
                 </div>
 
             </div>
