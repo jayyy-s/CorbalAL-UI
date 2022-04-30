@@ -1,0 +1,32 @@
+.curatorFeedCompletedBidsContainer{
+    display:flex;
+    flex-direction: row;
+    height:100vh;
+}
+
+.sideBarContainer{
+    height: 100%;
+    flex-basis: 60px;
+    background-color: var(--main-color);
+}
+
+.curatorFeedCompletedBidsMainContainer{
+    display:flex;
+    flex-direction: column;
+    flex:3;
+    background-color: var(--background-color);
+
+}
+
+.ml_1 {
+    margin-left: 1rem;
+}
+
+.my_1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bidsContainer{
+    overflow:scroll;
+}

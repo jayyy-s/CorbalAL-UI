@@ -12,12 +12,12 @@ function CuratorFeedTopNavBar(props){
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/curator/bids" className={({isActive})=>isActive ? classes.active : undefined}>
+                <NavLink to="/curator/completed-bids" className={({isActive})=>isActive ? classes.active : undefined}>
                     Completed Bids
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/curator/mybids" className={({isActive})=>isActive ? classes.active : undefined}>
+                <NavLink to="/curator/my-bids" className={({isActive})=>isActive ? classes.active : undefined}>
                     Your Bids
                 </NavLink>
             </li>
