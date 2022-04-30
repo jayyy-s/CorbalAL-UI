@@ -46,7 +46,6 @@ function ArtistFeedTracksPage(props) {
     //NEEDS TO BE REMOVED
     //for test purposes
     useEffect(() => {
-        console.log("USE EFFECT RAN");
         const sortedTracks = [...artistTracks];
         sortedTracks.sort((a, b) => {
             const nameA = a.name.toUpperCase(); // ignore upper and lowercase

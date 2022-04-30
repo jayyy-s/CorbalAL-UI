@@ -40,12 +40,14 @@ function LogIn(props) {
 
   useEffect(() => {
     if (user && user.id !== -1) {
-      if (user.is_artist)
+      if (user.role=== "artist")
         navigate("/artist/home");
-      else
+      else if(user.role === "curator"){
         navigate("/curator/home");
+      }
     }
   }, [user])
+
 
   /**
    * Responds to login button

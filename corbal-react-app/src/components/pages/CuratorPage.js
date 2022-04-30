@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import SideBar from "../SideBar";
+import SideBar from "../CuratorSideBar";
 import BidInfo from "../BidInfo";
 import CuratorCard from "../CuratorCard"
 import PlaylistInfo from "../PlaylistInfo";

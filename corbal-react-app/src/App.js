@@ -6,6 +6,8 @@ import ArtistPage from "./components/pages/ArtistPage";
 import CuratorPage from "./components/pages/CuratorPage";
 import ArtistFeedTracksPage from "./components/pages/ArtistFeedTracksPage";
 import ArtistFeedOffersPage from "./components/pages/ArtistFeedOffersPage";
+import CuratorFeedMusicPage from  "./components/pages/CuratorFeedMusicPage";
+import CuratorFeedMyBidsPage from "./components/pages/CuratorFeedMyBidsPage";
 
 class App extends React.Component {
   render() {
@@ -19,6 +21,7 @@ class App extends React.Component {
           <Route path="/curator/home" element={<CuratorPage />} />
           <Route path="/artist/tracks" element={<ArtistFeedTracksPage />} />
           <Route path="/artist/offers" element={<ArtistFeedOffersPage />} />
+          <Route path="/curator/mybids" element={<CuratorFeedMyBidsPage />} />
         </Routes>
 
       </React.StrictMode>

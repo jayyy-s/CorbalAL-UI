@@ -1,6 +1,7 @@
 import OfferCard from './ArtistFeedOfferCard';
 import SortControl from './SortControl';
 import classes from './css/ArtistFeedOffersComponent.module.css';
+import PaginationComponent from './PaginationComponent';
 import {useState, useEffect} from 'react';
 
 function ArtistFeedOffersComponent(props) {
@@ -64,7 +65,8 @@ function ArtistFeedOffersComponent(props) {
             </div>
             <div className={classes.divider}></div>
             <div className={classes.container}>
-                {offerCards}
+                {/* {offerCards} */}
+                <PaginationComponent  data={offers} RenderComponent={OfferCard} dataLimit={4} />
             </div>
         </>
     )

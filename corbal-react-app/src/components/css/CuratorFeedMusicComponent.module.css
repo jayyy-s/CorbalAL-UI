@@ -1,0 +1,23 @@
+.container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    gap:1rem;
+}
+
+.divider{
+    height:1px;
+    background-color: #C4C4C4;
+    width: 75%;
+    margin-left:1rem;
+}
+
+.ml_1 {
+    margin-left: 1rem;
+}
+
+.title{
+    display:flex;
+    justify-content: space-between;
+    width:75%;
+}

@@ -44,7 +44,6 @@ export const fetchUser = (email, password) => {
                 throw new Error('Getting user data failed.');
             }
             return await response.json();
-
         };
 
         try {
