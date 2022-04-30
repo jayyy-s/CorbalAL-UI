@@ -1277,10 +1277,10 @@
     "uri": "spotify:track:5AKAyMEL5LqCkafztPdBSI"
 }
   ],
-  "offers": [
+  "bids": [
     {
       "id": 1,
-      "curator_id": 1,
+      "curator_id": 2,
       "artist_id": 1,
       "song_id": "6Q4PYJtrq8CBx7YCY5IyRN",
       "song_name": "Party Ain't Over (feat. Usher & Afrojack)",
@@ -1294,7 +1294,7 @@
     },
     {
       "id": 2,
-      "curator_id": 1,
+      "curator_id": 2,
       "artist_id": 1,
       "song_id": "10Sydb6AAFPdgCzCKOSZuI",
       "playlist_id": "6OPZZU6SfN43fFK2UDaDVS",
@@ -1308,7 +1308,7 @@
     },
     {
       "id": 3,
-      "curator_id": 1,
+      "curator_id": 2,
       "artist_id": 1,
       "song_id": "0QTVwqcOsYd73AOkYkk0Hg",
       "playlist_id": "6OPZZU6SfN43fFK2UDaDVS",
@@ -1322,7 +1322,7 @@
     },
     {
       "id": 4,
-      "curator_id": 1,
+      "curator_id": 2,
       "artist_id": 1,
       "song_id": "7oGRkL31ElVMcevQDceT99",
       "playlist_id": "6OPZZU6SfN43fFK2UDaDVS",
@@ -1336,7 +1336,7 @@
     },
     {
       "id": 5,
-      "curator_id": 1,
+      "curator_id": 2,
       "artist_id": 1,
       "song_id": "4k61iDqmtX9nI7RfLmp9aq",
       "playlist_id": "6OPZZU6SfN43fFK2UDaDVS",
@@ -1346,7 +1346,7 @@
       "playlist_spot": 1,
       "price": 300,
       "days_featured": 5,
-      "status": "Pending"
+      "status": "Completed"
     }
   ],
   "placements": [
@@ -1519,7 +1519,7 @@
       "spotify_user_id": ""
     }
   ],
-  "bids": [
+  "bids_copy": [
     {
       "id": 1,
       "curator_id": 2,

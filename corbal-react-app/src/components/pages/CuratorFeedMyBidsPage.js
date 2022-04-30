@@ -1,82 +1,82 @@
-import classes from '../css/ArtistFeedOffersPage.module.css';
-import ArtistFeedTopNavBar from '../ArtistFeedTopNavBar';
-import SideBar from '../SideBar';
+import classes from '../css/CuratorFeedMyBidsPage.module.css';
+import CuratorFeedTopNavBar from '../CuratorFeedTopNavBar';
+import SideBar from '../CuratorSideBar';
 import SearchBar from '../SearchBar';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchArtistOffers } from '../../store/artist-offers-slice';
-import { fetchArtistTracks } from '../../store/artist-tracks-slice';
-import OffersComponent from '../ArtistFeedOffersComponent';
+import { fetchCuratorBids } from '../../store/curator-bids-slice';
+import BidsComponent from '../CuratorFeedBidsComponent';
 
 
-function ArtistFeedOffersPage(props) {
+function CuratorFeedMyBidsPage(props) {
 
-    const [offersPending, setPendingOffers] = useState([]);
-    const [offersCompleted, setCompletedOffers] = useState([]);
-    const artistOffers = useSelector((state) => state.artistOffers.offers);
+    const [bidsPending, setPendingBids] = useState([]);
+    const [bidsCompleted, setCompletedBids] = useState([]);
+    const curatorBids = useSelector((state) => state.curatorBids.bids);
 
     // for PROD
     // useEffect(() => {
-    // setPendingOffers(artistOffers.filter((offer)=> offer.status !== 'Completed'));
-    // setCompletedOffers(artistOffers.filter((offer)=> offer.status === 'Completed'));
-    // },[artistOffers]);
+    // setPendingBids(curatorBids.filter((bid)=> bid.status !== 'Completed'));
+    // setCompletedBids(curatorBids.filter((bid)=> bid.status === 'Completed'));
+    // },[curatorBids]);
 
     //NEEDS TO BE REMOVED
-    //for test purposes i am fetching the tracks here.
+    //for test purposes i am fetching the bids here.
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(fetchArtistTracks(1));
-        dispatch(fetchArtistOffers(1));
+        dispatch(fetchCuratorBids(2));
     }, []);
-
-    const getPendingOffers=()=>{
-      return  artistOffers.filter((offer) => offer.status !== 'Completed')
-    }
-
-    const getCompletedOffers=()=>{
-        return  artistOffers.filter((offer) => offer.status === 'Completed')
-      }
 
     //NEEDS TO BE REMOVED
     //for test
     useEffect(() => {
-        setPendingOffers(getPendingOffers());
-        setCompletedOffers(getCompletedOffers());
-    }, [artistOffers]);
+        setPendingBids(getPendingBids());
+        setCompletedBids(getCompletedBids());
+    }, [curatorBids]);
+
+    const getPendingBids=()=>{
+      return  curatorBids.filter((bid) => bid.status !== 'Completed')
+    }
+
+    const getCompletedBids=()=>{
+        return  curatorBids.filter((bid) => bid.status === 'Completed')
+      }
+
+
 
     const handleSearchInputChange = (searchText) => {
         if (searchText.length > 0) {
-            const filteredPendingOffers = artistOffers.filter((offer) => offer.status !== 'Completed' && offer.song_name.toLowerCase().includes(searchText.toLowerCase()));
-            setPendingOffers(filteredPendingOffers);
+            const filteredPendingBids = curatorBids.filter((bid) => bid.status !== 'Completed' && bid.song_name.toLowerCase().includes(searchText.toLowerCase()));
+            setPendingBids(filteredPendingBids);
            
-            const filteredCompletedOffers = artistOffers.filter((offer) => offer.status === 'Completed' && offer.song_name.toLowerCase().includes(searchText.toLowerCase()));
-            setCompletedOffers(filteredCompletedOffers);
+            const filteredCompletedBids = curatorBids.filter((bid) => bid.status === 'Completed' && bid.song_name.toLowerCase().includes(searchText.toLowerCase()));
+            setCompletedBids(filteredCompletedBids);
         }
         else {
-            setPendingOffers(getPendingOffers());
-            setCompletedOffers(getCompletedOffers());
+            setPendingBids(getPendingBids());
+            setCompletedBids(getCompletedBids());
         }
     }
 
     return (
-        <div className={classes.artistFeedOffersContainer}>
+        <div className={classes.curatorFeedBidsContainer}>
             <div className={classes.sideBarContainer}>
                 <SideBar />
             </div>
-            <div className={classes.artistFeedOffersMainContainer}>
-                <ArtistFeedTopNavBar />
+            <div className={classes.curatorFeedBidsMainContainer}>
+                <CuratorFeedTopNavBar />
 
                 <div className={`${classes.ml_1} ${classes.my_1}`}>
                     <SearchBar id="search-bids" placeholder="Search for Bid" label="Search for Bid" onSearchInputChange={handleSearchInputChange} />
                 </div>
 
-                <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
-                    <OffersComponent offers={offersPending} title="Pending" />
+                <div className={`${classes.ml_1}  ${classes.my_1}`}>
+                    <BidsComponent bids={bidsPending} title="Pending" />
                 </div>
 
 
-                <div className={`${classes.ml_1} ${classes.offersContainer} ${classes.my_1}`}>
-                    <OffersComponent offers={offersCompleted} title="Completed" />
+                <div className={`${classes.ml_1}  ${classes.my_1}`}>
+                    <BidsComponent bids={bidsCompleted} title="Completed" />
                 </div>
 
             </div>
@@ -84,4 +84,4 @@ function ArtistFeedOffersPage(props) {
     )
 }
 
-export default ArtistFeedOffersPage;
+export default CuratorFeedMyBidsPage;

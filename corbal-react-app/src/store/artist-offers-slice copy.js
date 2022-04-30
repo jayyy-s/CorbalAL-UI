@@ -39,7 +39,7 @@ export const fetchArtistOffers = (artistId) => {
         //Ideally we will be sending a request to '/offers?artistId=1' to obtain only the artist's offers.
         const getOffersRequest = async () => {
             const response = await fetch(
-                `${endPoint}/bids`
+                `${endPoint}/offers`
             );
             if (!response.ok) {
                 throw new Error('Getting offers data failed.');

@@ -2,6 +2,12 @@ import classes from './css/ArtistFeedTrackCard.module.css';
 
 function ArtistFeedTrackCard(props) {
 
+    const millisToMinutesAndSeconds = (millis) => {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+
     return (<div className={classes.card}>
         <div className={classes.cardImage}>
             <img className={classes.image} src={props.imageUrl} />
@@ -10,13 +16,13 @@ function ArtistFeedTrackCard(props) {
             </button>
         </div>
         <div className={classes.duration}>
-            {props.duration_ms}
+            {millisToMinutesAndSeconds(props.track.duration_ms)}
         </div>
         <div className={classes.trackName}>
             {props.trackName}
         </div>
     </div>
     )
-} 
+}
 
 export default ArtistFeedTrackCard;

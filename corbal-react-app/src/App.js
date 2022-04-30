@@ -21,6 +21,7 @@ class App extends React.Component {
           <Route path="/curator/home" element={<CuratorPage />} />
           <Route path="/artist/tracks" element={<ArtistFeedTracksPage />} />
           <Route path="/artist/offers" element={<ArtistFeedOffersPage />} />
+          <Route path="/curator/music" element={<CuratorFeedMusicPage />} />
           <Route path="/curator/mybids" element={<CuratorFeedMyBidsPage />} />
         </Routes>
 
