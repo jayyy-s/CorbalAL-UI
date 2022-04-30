@@ -1,4 +1,4 @@
-.curatorFeedOffersContainer{
+.curatorFeedMusicContainer{
     display:flex;
     flex-direction: row;
     height:100vh;
@@ -10,11 +10,17 @@
     background-color: var(--main-color);
 }
 
-.curatorFeedOffersMainContainer{
+.curatorFeedMusicWrapper{
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+}
+
+.curatorFeedMusicMainContainer{
     display:flex;
     flex-direction: column;
-    flex: 3;
     background-color: var(--background-color);
+    flex: 1
 }
 
 .ml_1 {

@@ -72,7 +72,7 @@ function CuratorFeedMusicComponent(props) {
             </div>
             <div className={classes.divider}></div>
             <div>
-                    <PaginationComponent  data={pitches} RenderComponent={PitchCard} dataLimit={4} />
+                    <PaginationComponent  data={pitches} RenderComponent={PitchCard} dataLimit={props.dataLimit} handleOnClick={props.handleCreateBidOnClick} />
             </div>
         </>
     )

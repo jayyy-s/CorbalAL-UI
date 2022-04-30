@@ -1,7 +1,7 @@
 import classes from '../components/css/PaginationComponent.module.css';
 import { useState } from 'react';
 
-function PaginationComponent({ data, RenderComponent, dataLimit }) {
+function PaginationComponent({ data, RenderComponent, dataLimit , handleOnClick}) {
 
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -42,7 +42,7 @@ function PaginationComponent({ data, RenderComponent, dataLimit }) {
             </svg>}
             <div className={classes.content}>
                 {
-                    getPaginatedData().map((item, index) => (<RenderComponent key={item.id} data={item} />))
+                    getPaginatedData().map((item, index) => (<RenderComponent key={item.id} data={item} onClick={handleOnClick}/>))
                 }
             </div>
             {/* <div>

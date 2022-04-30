@@ -46,6 +46,10 @@ function CuratorFeedPitchCard(props) {
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
 
+    const handleCreateBidOnClick =()=>{
+        props.onClick(props.data, track);
+    }
+
     return (<>
         {track &&
 
@@ -64,7 +68,7 @@ function CuratorFeedPitchCard(props) {
                     {track.name}
                 </div>
                 <div className={classes.btn_create_wrapper}>
-                    <button className={classes.btn_create}>Create Bid</button>
+                    <button className={classes.btn_create} onClick={handleCreateBidOnClick}>Create Bid</button>
                 </div>
             </div>
             )
