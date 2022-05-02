@@ -14,9 +14,13 @@ function ArtistFeedOfferCard(props) {
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
 
+    const handleOnClick = (event) =>{
+        props.onClick(props.data);
+    }
+
 
     return (
-        <div className={classes.card}>
+        <div className={classes.card} onClick={props.data.status === "Pending" ?  handleOnClick :  null}>
             <div className={classes.price}>
                 {`$ ${props.data.price}`}
             </div>

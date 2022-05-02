@@ -20,6 +20,11 @@ const artistOffersSlice = createSlice({
 
 
             state.offers = action.payload.offers;
+        },
+        updateArtistOffer(state,action){
+          state.offers = state.offers.map((offer)=> {
+                 return offer.id === action.payload.offer.id ? action.payload.offer : offer
+            })
         }
     }
 });
@@ -63,5 +68,40 @@ export const fetchArtistOffers = (artistId) => {
         }
     };
 };
+
+export const updateArtistOffer = (offer)=>{
+    return async (dispatch) => {
+
+        const putOffer = async () => {
+            const response = await fetch(
+                `${endPoint}/bids/${offer.id}`,
+                {
+                    method : 'PUT',
+                    body: JSON.stringify(offer),
+                    headers: {
+                        "Content-type": "application/json"
+                      }
+                }
+            );
+            if (!response.ok) {
+                throw new Error('Updating offer data failed.');
+            }
+            return await response.json();
+
+        };
+
+        try {
+            const offer = await putOffer();
+
+            dispatch(
+                artistOffersActions.updateArtistOffer({
+                    offer
+                })
+            );
+        } catch (error) {
+            console.log("There was an error updating a offer");
+        }
+    };
+}
 
 export default artistOffersSlice;

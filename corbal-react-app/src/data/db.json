@@ -1291,7 +1291,7 @@
       "price": 400,
       "days_featured": 1,
       "status": "Pending",
-      "genre" : "Pop",
+      "genre": "Pop",
       "created_at": "2022-04-25 13:23:44"
     },
     {
@@ -1307,7 +1307,7 @@
       "price": 200,
       "days_featured": 5,
       "status": "Pending",
-      "genre" : "Pop",
+      "genre": "Pop",
       "created_at": "2022-04-26 13:23:44"
     },
     {
@@ -1322,8 +1322,8 @@
       "playlist_spot": 1,
       "price": 300,
       "days_featured": 5,
-      "status": "Pending",
-      "genre" : "Pop",
+      "status": "Completed",
+      "genre": "Pop",
       "created_at": "2022-04-27 13:23:44"
     },
     {
@@ -1338,8 +1338,8 @@
       "playlist_spot": 1,
       "price": 300,
       "days_featured": 5,
-      "status": "Pending",
-      "genre" : "Pop",
+      "status": "Completed",
+      "genre": "Pop",
       "created_at": "2022-04-28 13:23:44"
     },
     {
@@ -1355,7 +1355,7 @@
       "price": 300,
       "days_featured": 5,
       "status": "Completed",
-      "genre" : "Pop",
+      "genre": "Pop",
       "created_at": "2022-04-29 13:23:44"
     },
     {
@@ -1370,9 +1370,26 @@
       "price": "125",
       "days_featured": "10",
       "status": "Pending",
-      "genre" : "Pop",
+      "genre": "Pop",
       "created_at": "2022-05-02 16:21:54",
       "id": 6
+    }
+  ],
+  "responses": [
+    {
+      "id": 1,
+      "bid_id": 1,
+      "playlist_spot": 1,
+      "price": 400,
+      "days_featured": 1,
+      "created_at": "2022-04-25 13:23:44"
+    },
+    {
+      "bid_id": 1,
+      "playlist_spot": 1,
+      "price": "200",
+      "days_featured": "7",
+      "id": 2
     }
   ],
   "placements": [

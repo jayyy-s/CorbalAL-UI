@@ -66,7 +66,7 @@ function ArtistFeedOffersComponent(props) {
             <div className={classes.divider}></div>
             <div className={classes.container}>
                 {/* {offerCards} */}
-                <PaginationComponent  data={offers} RenderComponent={OfferCard} dataLimit={4} />
+                <PaginationComponent  data={offers} RenderComponent={OfferCard} dataLimit={props.dataLimit} handleOnClick={props.handleOpenForm} />
             </div>
         </>
     )
