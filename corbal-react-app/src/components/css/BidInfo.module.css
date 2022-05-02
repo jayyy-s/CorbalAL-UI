@@ -1,0 +1,48 @@
+.bidInfoCard {
+  height: 188px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+  /* background-color: rgba(255, 255, 255, 1); */
+  /* background-image : url(/../../assets/BidInfo.svg); */
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 6px 0px rgba(75, 81, 91, 0.5);
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.trackName{
+  font-weight: bold;
+}
+
+.bidInfoSection {
+  flex: 2
+}
+
+.bidInfoImg {
+  width: 100px;
+  height: 100px;
+  flex: 1
+}
+
+.bidContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.bidPrice {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  font-weight: bold;
+}

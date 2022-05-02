@@ -42,9 +42,9 @@ export const fetchCuratorPlaylists = (curatorSpotifyId) => {
         };
 
         try {
-            const playlists = await getPlaylistsRequest();
+            const data = await getPlaylistsRequest();
             
-            // const playlists = data.filter(track =>track.curator_id===curatorId);
+            const playlists = data.filter(playlist =>playlist.owner.id===curatorSpotifyId);
 
             dispatch(
                 curatorPlaylistsActions.fetchCuratorPlaylists({

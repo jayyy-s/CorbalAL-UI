@@ -13,25 +13,26 @@ import {
   useSelector,
   useDispatch
 } from 'react-redux';
-import {fetchCuratorBids} from '../../store/curator-bids-slice';
-import {fetchCuratorPlaylists} from '../../store/curator-playlists-slice';
+import { fetchCuratorBids } from '../../store/curator-bids-slice';
+import { fetchCuratorPlaylists } from '../../store/curator-playlists-slice';
 
 import "../css/curator_page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function CuratorPage(props) {
-  
-  const user = useSelector((state)=> state.user.user);
-  const bids = useSelector((state)=> state.curatorBids.bids);
-  const playlists = useSelector((state)=> state.curatorPlaylists.playlists)
+
+  const user = useSelector((state) => state.user.user);
+  const bids = useSelector((state) => state.curatorBids.bids);
+  const playlists = useSelector((state) => state.curatorPlaylists.playlists)
   const dispatch = useDispatch();
+
 
   useEffect(() => {
     //call the bids and playlists endpoint
     dispatch(fetchCuratorBids(user.id));
-    dispatch(fetchCuratorPlaylists(user.id));
-  },[user]);
+    dispatch(fetchCuratorPlaylists(user.spotify_user_id));
+  }, [user]);
 
   /**
    * Pulls information from redux store to create userCard
@@ -55,31 +56,18 @@ function CuratorPage(props) {
     );
   };
 
-  const renderBids = ()=>{
-
-  }
-
-  const renderMusic = () => {
-
-  }
 
 
-  // think it would be good if .tracks wasn't used here
-  const songs = fetchSongs().tracks;
   const songBids = bids.map((bid) => {
     const songBid = (
       <BidInfo
-        key={`${bid.song_id}:${bid.song_name}`}
-        songName={bid.song_name}
-        // genre={`${song.genres[0]}`}
-        playlistPosition={bid.playlist_spot}
-        timeFeatured={bid.days_featured}
+        bid={bid}
       />
     );
     return songBid;
   });
 
-  const yourPlaylists=playlists.map((playlist)=>{
+  const yourPlaylists = playlists.map((playlist) => {
     return (<PlaylistInfo
       playlistName={playlist.name}
       genre="GENRE??????"
@@ -88,7 +76,7 @@ function CuratorPage(props) {
       noOfTracks={playlist.tracks.total}
     />)
   })
-  
+
   return (
     <div className="app-container">
       <div className="sideBar-container">
@@ -96,8 +84,8 @@ function CuratorPage(props) {
       </div>
       <div className="main-container">
         <div className="header-container">{
-            //renders UserCard
-            renderUserCard()}</div>
+          //renders UserCard
+          renderUserCard()}</div>
         <div className="body-container">
           <div className="bid-section">
             <YourBids numCompleted="10" numPending="10" numUnread="10" />
@@ -105,8 +93,8 @@ function CuratorPage(props) {
               <div class="bids-divider"></div>
             </div>
             {<div className="ml-align">{
-                //renders Song Bids
-                songBids}</div>}
+              //renders Song Bids
+              songBids}</div>}
           </div>
           <div className="music-section">
             <YourPlaylists />

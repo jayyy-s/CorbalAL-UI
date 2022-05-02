@@ -1136,65 +1136,65 @@
     },
     {
       "album": {
-          "album_type": "album",
-          "artists": [
-              {
-                  "external_urls": {
-                      "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
-                  "id": "4dpARuHxo51G3z768sgnrY",
-                  "name": "Adele",
-                  "type": "artist",
-                  "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
-              }
-          ],
-          "external_urls": {
-              "spotify": "https://open.spotify.com/album/0Lg1uZvI312TPqxNWShFXL"
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
+            },
+            "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
+            "id": "4dpARuHxo51G3z768sgnrY",
+            "name": "Adele",
+            "type": "artist",
+            "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0Lg1uZvI312TPqxNWShFXL"
+        },
+        "href": "https://api.spotify.com/v1/albums/0Lg1uZvI312TPqxNWShFXL",
+        "id": "0Lg1uZvI312TPqxNWShFXL",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731c88166762f2e18f8f23c6f1",
+            "width": 640
           },
-          "href": "https://api.spotify.com/v1/albums/0Lg1uZvI312TPqxNWShFXL",
-          "id": "0Lg1uZvI312TPqxNWShFXL",
-          "images": [
-              {
-                  "height": 640,
-                  "url": "https://i.scdn.co/image/ab67616d0000b2731c88166762f2e18f8f23c6f1",
-                  "width": 640
-              },
-              {
-                  "height": 300,
-                  "url": "https://i.scdn.co/image/ab67616d00001e021c88166762f2e18f8f23c6f1",
-                  "width": 300
-              },
-              {
-                  "height": 64,
-                  "url": "https://i.scdn.co/image/ab67616d000048511c88166762f2e18f8f23c6f1",
-                  "width": 64
-              }
-          ],
-          "name": "21",
-          "release_date": "2011-01-24",
-          "release_date_precision": "day",
-          "total_tracks": 11,
-          "type": "album",
-          "uri": "spotify:album:0Lg1uZvI312TPqxNWShFXL"
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021c88166762f2e18f8f23c6f1",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511c88166762f2e18f8f23c6f1",
+            "width": 64
+          }
+        ],
+        "name": "21",
+        "release_date": "2011-01-24",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:0Lg1uZvI312TPqxNWShFXL"
       },
       "artists": [
-          {
-              "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
-              },
-              "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
-              "id": "4dpARuHxo51G3z768sgnrY",
-              "name": "Adele",
-              "type": "artist",
-              "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
-          }
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
+          },
+          "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
+          "id": "4dpARuHxo51G3z768sgnrY",
+          "name": "Adele",
+          "type": "artist",
+          "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
+        }
       ],
       "disc_number": 1,
       "duration_ms": 285240,
       "explicit": false,
       "external_urls": {
-          "spotify": "https://open.spotify.com/track/1zwMYTA5nlNjZxYrvBB2pV"
+        "spotify": "https://open.spotify.com/track/1zwMYTA5nlNjZxYrvBB2pV"
       },
       "href": "https://api.spotify.com/v1/tracks/1zwMYTA5nlNjZxYrvBB2pV",
       "id": "1zwMYTA5nlNjZxYrvBB2pV",
@@ -1204,43 +1204,43 @@
       "track_number": 11,
       "type": "track",
       "uri": "spotify:track:1zwMYTA5nlNjZxYrvBB2pV"
-  },
-  {
-    "album": {
+    },
+    {
+      "album": {
         "album_type": "album",
         "artists": [
-            {
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
-                },
-                "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
-                "id": "4dpARuHxo51G3z768sgnrY",
-                "name": "Adele",
-                "type": "artist",
-                "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
-            }
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
+            },
+            "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
+            "id": "4dpARuHxo51G3z768sgnrY",
+            "name": "Adele",
+            "type": "artist",
+            "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
+          }
         ],
         "external_urls": {
-            "spotify": "https://open.spotify.com/album/0Lg1uZvI312TPqxNWShFXL"
+          "spotify": "https://open.spotify.com/album/0Lg1uZvI312TPqxNWShFXL"
         },
         "href": "https://api.spotify.com/v1/albums/0Lg1uZvI312TPqxNWShFXL",
         "id": "0Lg1uZvI312TPqxNWShFXL",
         "images": [
-            {
-                "height": 640,
-                "url": "https://i.scdn.co/image/ab67616d0000b2731c88166762f2e18f8f23c6f1",
-                "width": 640
-            },
-            {
-                "height": 300,
-                "url": "https://i.scdn.co/image/ab67616d00001e021c88166762f2e18f8f23c6f1",
-                "width": 300
-            },
-            {
-                "height": 64,
-                "url": "https://i.scdn.co/image/ab67616d000048511c88166762f2e18f8f23c6f1",
-                "width": 64
-            }
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731c88166762f2e18f8f23c6f1",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021c88166762f2e18f8f23c6f1",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511c88166762f2e18f8f23c6f1",
+            "width": 64
+          }
         ],
         "name": "21",
         "release_date": "2011-01-24",
@@ -1248,34 +1248,34 @@
         "total_tracks": 11,
         "type": "album",
         "uri": "spotify:album:0Lg1uZvI312TPqxNWShFXL"
-    },
-    "artists": [
+      },
+      "artists": [
         {
-            "external_urls": {
-                "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
-            },
-            "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
-            "id": "4dpARuHxo51G3z768sgnrY",
-            "name": "Adele",
-            "type": "artist",
-            "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
+          },
+          "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
+          "id": "4dpARuHxo51G3z768sgnrY",
+          "name": "Adele",
+          "type": "artist",
+          "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
         }
-    ],
-    "disc_number": 1,
-    "duration_ms": 241351,
-    "explicit": false,
-    "external_urls": {
+      ],
+      "disc_number": 1,
+      "duration_ms": 241351,
+      "explicit": false,
+      "external_urls": {
         "spotify": "https://open.spotify.com/track/5AKAyMEL5LqCkafztPdBSI"
-    },
-    "href": "https://api.spotify.com/v1/tracks/5AKAyMEL5LqCkafztPdBSI",
-    "id": "5AKAyMEL5LqCkafztPdBSI",
-    "is_local": false,
-    "name": "I'll Be Waiting",
-    "preview_url": "https://p.scdn.co/mp3-preview/c1bf8d03d7abbf9bccefa78b13e76645037dc398?cid=774b29d4f13844c495f206cafdad9c86",
-    "track_number": 8,
-    "type": "track",
-    "uri": "spotify:track:5AKAyMEL5LqCkafztPdBSI"
-}
+      },
+      "href": "https://api.spotify.com/v1/tracks/5AKAyMEL5LqCkafztPdBSI",
+      "id": "5AKAyMEL5LqCkafztPdBSI",
+      "is_local": false,
+      "name": "I'll Be Waiting",
+      "preview_url": "https://p.scdn.co/mp3-preview/c1bf8d03d7abbf9bccefa78b13e76645037dc398?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:5AKAyMEL5LqCkafztPdBSI"
+    }
   ],
   "bids": [
     {
@@ -1291,6 +1291,7 @@
       "price": 400,
       "days_featured": 1,
       "status": "Pending",
+      "genre" : "Pop",
       "created_at": "2022-04-25 13:23:44"
     },
     {
@@ -1306,6 +1307,7 @@
       "price": 200,
       "days_featured": 5,
       "status": "Pending",
+      "genre" : "Pop",
       "created_at": "2022-04-26 13:23:44"
     },
     {
@@ -1321,6 +1323,7 @@
       "price": 300,
       "days_featured": 5,
       "status": "Pending",
+      "genre" : "Pop",
       "created_at": "2022-04-27 13:23:44"
     },
     {
@@ -1336,6 +1339,7 @@
       "price": 300,
       "days_featured": 5,
       "status": "Pending",
+      "genre" : "Pop",
       "created_at": "2022-04-28 13:23:44"
     },
     {
@@ -1351,7 +1355,24 @@
       "price": 300,
       "days_featured": 5,
       "status": "Completed",
+      "genre" : "Pop",
       "created_at": "2022-04-29 13:23:44"
+    },
+    {
+      "curator_id": 2,
+      "artist_id": 2,
+      "song_id": "10Sydb6AAFPdgCzCKOSZuI",
+      "playlist_id": "6OPZZU6SfN43fFK2UDaDVS",
+      "song_name": "Have Some Fun (feat. The Wanted & Afrojack)",
+      "no_of_tracks_playlist": "111",
+      "no_of_followers": 123,
+      "playlist_spot": "1",
+      "price": "125",
+      "days_featured": "10",
+      "status": "Pending",
+      "genre" : "Pop",
+      "created_at": "2022-05-02 16:21:54",
+      "id": 6
     }
   ],
   "placements": [
@@ -1567,47 +1588,83 @@
       "collaborative": false,
       "description": "",
       "external_urls": {
-        "spotify": "https://open.spotify.com/playlist/47s8Pj6MjV5UWYEaHIe9ZH"
+        "spotify": "https://open.spotify.com/playlist/6OPZZU6SfN43fFK2UDaDVS"
       },
-      "href": "https://api.spotify.com/v1/playlists/47s8Pj6MjV5UWYEaHIe9ZH",
-      "id": "47s8Pj6MjV5UWYEaHIe9ZH",
+      "href": "https://api.spotify.com/v1/playlists/6OPZZU6SfN43fFK2UDaDVS",
+      "id": "6OPZZU6SfN43fFK2UDaDVS",
       "images": [
         {
           "height": 640,
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273ba4c798ab356b8adb64bb2fcab67616d0000b273cb8d1acbf1184d3b7b268747ab67616d0000b273dbe9c4609ec382dcc0391e62",
+          "url": "https://i.scdn.co/image/ab67616d0000b2731a1eea01889569fbac8cbc5d",
+          "width": 640
+        }
+      ],
+      "name": "TestCorbal",
+      "owner": {
+        "display_name": "Jason Paul",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/31btutmmxe4iqp2wpmzl3e7fnmqi"
+        },
+        "href": "https://api.spotify.com/v1/users/31btutmmxe4iqp2wpmzl3e7fnmqi",
+        "id": "31btutmmxe4iqp2wpmzl3e7fnmqi",
+        "type": "user",
+        "uri": "spotify:user:31btutmmxe4iqp2wpmzl3e7fnmqi"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MiwwMzlmNTg2ZWJkYThiMzhjN2U3OTkzZmNjODA4Yzk3OWIzN2I5OTJj",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/6OPZZU6SfN43fFK2UDaDVS/tracks",
+        "total": 1
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:6OPZZU6SfN43fFK2UDaDVS"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/2qk3fRZxPV8m4q5zkhoBo5"
+      },
+      "href": "https://api.spotify.com/v1/playlists/2qk3fRZxPV8m4q5zkhoBo5",
+      "id": "2qk3fRZxPV8m4q5zkhoBo5",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27320beb61f61fcbeb33b10a9abab67616d0000b273554488d0c51967b1654d8ce5ab67616d0000b27394c9217a398f5174757c0c78ab67616d0000b273fc2101e6889d6ce9025f85f2",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273ba4c798ab356b8adb64bb2fcab67616d0000b273cb8d1acbf1184d3b7b268747ab67616d0000b273dbe9c4609ec382dcc0391e62",
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27320beb61f61fcbeb33b10a9abab67616d0000b273554488d0c51967b1654d8ce5ab67616d0000b27394c9217a398f5174757c0c78ab67616d0000b273fc2101e6889d6ce9025f85f2",
           "width": 300
         },
         {
           "height": 60,
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273ba4c798ab356b8adb64bb2fcab67616d0000b273cb8d1acbf1184d3b7b268747ab67616d0000b273dbe9c4609ec382dcc0391e62",
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27320beb61f61fcbeb33b10a9abab67616d0000b273554488d0c51967b1654d8ce5ab67616d0000b27394c9217a398f5174757c0c78ab67616d0000b273fc2101e6889d6ce9025f85f2",
           "width": 60
         }
       ],
-      "name": "Dance I Said",
+      "name": "Slow Music",
       "owner": {
-        "display_name": "Michelle Kadir",
+        "display_name": "Jason Paul",
         "external_urls": {
-          "spotify": "https://open.spotify.com/user/michellekadir"
+          "spotify": "https://open.spotify.com/user/31btutmmxe4iqp2wpmzl3e7fnmqi"
         },
-        "href": "https://api.spotify.com/v1/users/michellekadir",
-        "id": "michellekadir",
+        "href": "https://api.spotify.com/v1/users/31btutmmxe4iqp2wpmzl3e7fnmqi",
+        "id": "31btutmmxe4iqp2wpmzl3e7fnmqi",
         "type": "user",
-        "uri": "spotify:user:michellekadir"
+        "uri": "spotify:user:31btutmmxe4iqp2wpmzl3e7fnmqi"
       },
       "primary_color": null,
       "public": true,
-      "snapshot_id": "NjU1LGViYzk5YWViYWVmNmExN2ViMWZiOTEwMDVlM2YwZTg2ZTA4Y2FmNDA=",
+      "snapshot_id": "MjgsNzJhMWNmZDZlYmQ3ZWIwMGZlODI3NjZmM2M4NWQ5ZDY1ZmZkNGY4Nw==",
       "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/47s8Pj6MjV5UWYEaHIe9ZH/tracks",
-        "total": 106
+        "href": "https://api.spotify.com/v1/playlists/2qk3fRZxPV8m4q5zkhoBo5/tracks",
+        "total": 23
       },
       "type": "playlist",
-      "uri": "spotify:playlist:47s8Pj6MjV5UWYEaHIe9ZH"
+      "uri": "spotify:playlist:2qk3fRZxPV8m4q5zkhoBo5"
     }
   ]
 }
