@@ -3,7 +3,7 @@
 .SideBar {
   height: 100%;
   flex-basis: 60px;
-  background-color: var(--main-color);
+  background-color: #141419;
 }
 
 .SideBar-list {
@@ -33,7 +33,7 @@
 }
 
 .SideBar-item {
-  background-color: rgb(255, 253, 253);
+  background-color: #141419;
   list-style-type: none;
   width: 46px;
   height: 46px;
@@ -41,6 +41,10 @@
   margin-right: 10px;
   margin-bottom: 50px;
   border-radius: 10px;
+}
+
+.SideBar-item:hover {
+  background-color: #2b2b31;
 }
 
 .SideBar-Link,
@@ -56,8 +60,20 @@
   justify-content: center;
   align-items: center;
   color: inherit;
+  padding: 2px;
+}
+
+.sideBarLinkName {
+  color: white;
+  font-size: 9px;
+  text-align: center;
 }
 
 .SideBar-Link :hover {
-  color: rgb(67, 67, 67);
+  background-color: #2b2b31;
+}
+
+.asset-container {
+  width: 100%;
+  height: 100%;
 }

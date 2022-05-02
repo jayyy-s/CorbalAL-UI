@@ -118,6 +118,7 @@ function ArtistPage(props) {
         <div className="header-container">{
             //renders UserCard
             renderUserCard()}</div>
+        <div className="main-container"></div>
         <div className="body-container">
           <div className="bid-section">
             <YourBids numCompleted="10" numPending="10" numUnread="10" />

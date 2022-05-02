@@ -3,7 +3,7 @@
 .UserCard {
   height: 300px;
   width: 95%;
-  background-color: var(--header-color);
+  background-color: #1a1b3d;
   margin: 30px;
   display: flex;
   flex-direction: row;
@@ -65,7 +65,7 @@
 }
 
 .pfp-container {
-  background-color: rgb(255, 253, 253);
+  background-color: #1a1b3d;
   width: 212px;
   height: 212px;
   margin-left: 69px;
@@ -85,13 +85,16 @@ img {
   align-items: top;
   margin-bottom: 30px;
   font-size: 50px;
+  color: white;
 }
 
 .real-name-age {
   font-size: 18px;
+  color: white;
 }
 
 .user-detail {
   font-size: 14px;
   font-weight: lighter;
+  color: white;
 }
