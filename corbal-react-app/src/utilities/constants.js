@@ -1,3 +1,3 @@
 export const GENRES=["Pop","EDM","ROCK"];
 
-export const spotifyToken = "BQBPfRzV4wvOK6TWWEJw-dwASJ5b4WpXO5W3m_J_7dvjxoMuo1MTmtI7gViK43MghjV80urg8Spr5BN0Pknpi316n2WC6EVjNKmMNga_wMVhnXrR55pfthCPbkII5tVwGd77Eal45osARRFT56F3TswueHeo3MxDBSHsLCU"
+export const spotifyToken = "BQCEh_FlpPAh5MfeqOCa60q9han65g-nQRPDD9G7R8GHDDnyCHS9dgpVJyFUkc51lZdmVLWl45M6hoFD08ELGQMc1ML4P5jb6jULf8NuAHwIdKSChED7t_eNlVnWx4och3mx6BSROsmiQ9TN26tXZ9CQ9U_rrdYVYz9B610"

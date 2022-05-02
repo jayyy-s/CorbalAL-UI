@@ -17,6 +17,8 @@ function CuratorFeedMusicPage(props) {
     const [selectedPitch, setSelectedPitch] = useState(null);
     const [selectedTrack, setSelectedTrack] = useState(null);
     const allPitches = useSelector((state) => state.pitches.pitches);
+    const playlists = useSelector((state) => state.curatorPlaylists.playlists)
+
 
     // for PROD
     // useEffect(() => {
@@ -70,6 +72,14 @@ function CuratorFeedMusicPage(props) {
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
 
+    const genreOptions = GENRES.map((genre) => {
+        return (<option key={genre} value={genre}>{genre}</option>)
+    })
+
+    const playlistOptions = playlists.map((playlist) => {
+        return (<option key={playlist.id} value={playlist.id} >{playlist.name}</option>)
+    })
+
     return (
         <div className={classes.curatorFeedMusicContainer}>
             <div className={classes.sideBarContainer}>
@@ -87,21 +97,74 @@ function CuratorFeedMusicPage(props) {
                     {genreSections}
                 </div>
                 {/**Renders the create a bid form */}
-                {isFormOpen && <div style={{flexGrow: isFormOpen ? 1 : 0}}>
-                    <div>
-                        <img src={selectedTrack.album.images[0].url} />
-                        <div>
-                            {selectedTrack.name}
-                        </div>
-                        <div>
-                            {millisToMinutesAndSeconds(selectedTrack.duration_ms)}
-                        </div>
-                        <div>
-                            {selectedPitch.genre}
+                {isFormOpen && <div className={classes.formContainer} style={{ flexGrow: isFormOpen ? 1 : 0 }}>
+                    <h3>Create a Bid</h3>
+                    <div className={classes.pitchDetailContainer}>
+                        <img className={classes.pitchImg} src={selectedTrack.album.images[0].url} />
+                        <div className={classes.pitchContent}>
+                            <div className={classes.trackContent}>
+                                <div>
+                                    {selectedTrack.name}
+                                </div>
+                                <div>
+                                    {millisToMinutesAndSeconds(selectedTrack.duration_ms)}
+                                </div>
+                            </div>
+                            <div>
+                                {selectedPitch.genre}
+                            </div>
                         </div>
                     </div>
-                    <form>
-                    </form>
+
+                    <div className={classes.bidFormContainer}>
+                        <div className={classes.bidFormTitle}>Enter Bid Details</div>
+                        <form>
+                            <div className={classes.formRow}>
+                                <div className={classes.formFieldSet} >
+                                    <label for="playlists">Select Playlist</label>
+                                    {/* <input type="text" list="playlistsOption" id="playlists" name="playlists" />
+                                    <datalist id="playlistsOption">{playlistOptions}</datalist> */}
+                                    <select name="playlist-options" id="playlist-options">
+                                        {playlistOptions}
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div className={classes.formRow}>
+                                <div className={classes.formFieldSet}>
+                                    <label for="bid-price">Bid Price</label>
+                                    <input type="number" step="0.01" id="bid-price" name="bid-price" placeholder="$USD" required />
+                                </div>
+                                <div className={classes.formFieldSet}>
+                                    <label for="playlist-genre">Genre Playlist</label>
+                                    <select name="playlist-genre" id="playlist-genre">
+                                        {genreOptions}
+                                    </select>
+                                </div>
+                            </div>
+                            <div className={classes.formRow}>
+
+                                <div className={classes.formFieldSet}>
+                                    <label>Placement On Playlist</label>
+                                    <div className={classes.playlistSpot}>
+                                        <input type="number" id="playlist-slot" name="playlist-slot" placeholder="Slot#" required />
+                                        <div className={classes.playlistSpotDiv}>out of</div>
+                                        <input type="number" id="playlist-total-slots" name="playlist-total-slots" placeholder="Total Number of Playlists" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className={classes.formFieldSet}>
+                                    <label for="length-promotion">Length of Promotion</label>
+                                    <input type="number" id="length-promotion" name="length-promotion" placeholder="Length of Promotion" required />
+                                </div>
+                            </div>
+                            <div className={classes.form_btn_grp}>
+                                <button>Cancel</button>
+                                <button className={classes.btn_submit}>Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>}
             </div>
         </div>

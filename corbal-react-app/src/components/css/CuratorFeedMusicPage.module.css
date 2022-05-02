@@ -40,3 +40,89 @@
     width: 75%;
     margin-left:1rem;
 }
+
+.formContainer{
+    padding : 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pitchDetailContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 2rem;
+    margin: 1rem 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius:1rem
+}
+
+.pitchImg{
+    width:5rem;
+    height:5rem;
+}
+
+
+.bidFormContainer{
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bidFormTitle{
+    margin: 0rem 1rem;
+}
+
+.pitchContent {
+    flex: 2
+}
+
+
+.trackContent{
+    display :flex;
+    justify-content: space-between;
+}
+
+.formRow{
+    display :flex;
+    justify-content: space-between;
+    margin: 1.5rem 0rem;
+}
+
+.formFieldSet{
+    display :flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0rem 1rem;
+}
+
+.playlistSpot{
+    display :flex;
+    justify-content: space-between;
+}
+
+
+
+.playlistSpotDiv{
+    text-align: center;
+}
+
+.form_btn_grp{
+    display :flex;
+    justify-content: center;
+    margin: 1.5rem 0rem;
+}
+
+.form_btn_grp button{
+    margin: 0rem 1rem;
+    border:none;
+    border-radius:0.5rem;
+    padding: 1rem 2rem;
+}
+
+.btn_submit{
+    background-color: var(--secondary-color);
+    color:white
+}
