@@ -1,8 +1,12 @@
-import React from "react";
+import {useState} from "react";
 import "./css/userCard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PitchModal from "./PitchModal";
+
 
 function UserCard(props) {
+  const [openPitchModal, setOpenPitchModal] = useState(false);
+
   return (
     <div className="UserCard ml-align">
       <div className="profile-container">
@@ -26,7 +30,15 @@ function UserCard(props) {
         <div className="pitch-container">
           <p className="pitch-title">Pitch a Song</p>
           <div className="pitch-button-container">
-            <p>+</p>
+            <button
+              className="pitch-button-container"
+              onClick={props.handleOpenPitchModal}>
+              <p>+</p>
+            </button>
+            {/* {openPitchModal &&
+              <PitchModal
+                closePitchModal={setOpenPitchModal}
+                src={props.src} />} */}
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import React, { useEffect, useState } from "react";
 import { bindActionCreators } from "redux";
 import SideBar from "../SideBar";
 import BidInfo from "../BidInfo";
@@ -14,19 +13,21 @@ import {
   useDispatch
 } from 'react-redux';
 
-import {fetchArtistOffers} from '../../store/artist-offers-slice';
-import {fetchArtistTracks} from '../../store/artist-tracks-slice';
+import { fetchArtistOffers } from '../../store/artist-offers-slice';
+import { fetchArtistTracks } from '../../store/artist-tracks-slice';
 import classes from '../../components/css/Artist_page.module.css';
+import PitchModalComponent from '../PitchModalComponent';
 
-import "../css/Artist_page.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
+// import "../css/Artist_page.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
 
 function ArtistPage(props) {
- 
-  const user = useSelector((state)=> state.user.user);
-  const offers = useSelector((state)=> state.artistOffers.offers);
-  const tracks = useSelector((state)=> state.artistTracks.tracks);
+
+  const user = useSelector((state) => state.user.user);
+  const offers = useSelector((state) => state.artistOffers.offers);
+  const tracks = useSelector((state) => state.artistTracks.tracks);
+  const [isPitchOpen, setIsPitchOpen] = useState(false);
   const dispatch = useDispatch();
 
 
@@ -35,7 +36,15 @@ function ArtistPage(props) {
     dispatch(fetchArtistOffers(user.id));
     dispatch(fetchArtistTracks(user.id))
 
-  },[user]);
+  }, [user]);
+
+  const handleOpenPitchModal = ()=>{
+    setIsPitchOpen(true);
+  }
+
+  const handleClosePitchModal = ()=>{
+    setIsPitchOpen(false);
+  }
 
   /**
    * Pulls information from redux store to create userCard
@@ -55,6 +64,7 @@ function ArtistPage(props) {
         location={user.city}
         email={user.email}
         phone={user.phone}
+        handleOpenPitchModal={handleOpenPitchModal}
       />
     );
   };
@@ -62,7 +72,7 @@ function ArtistPage(props) {
 
   // think it would be good if .tracks wasn't used here
   const songs = fetchSongs().tracks;
-  
+
   // const songBids = [...songs].map((song) => {
   //   const songBid = (
   //     <BidInfo
@@ -85,8 +95,8 @@ function ArtistPage(props) {
     return songBid;
   });
 
-  const yourMusic=tracks.map((track)=>{
-    return ( <SongInfo
+  const yourMusic = tracks.map((track) => {
+    return (<SongInfo
       songName={track.name}
       popularity={track.popularity}
       genre="GENRE??????"
@@ -95,16 +105,24 @@ function ArtistPage(props) {
       track={track}
     />)
   })
+
+
   
+
   return (
     <div className={classes.app_container}>
       <div className={classes.sideBar_container}>
         <SideBar />
       </div>
       <div className={classes.main_container}>
+        {isPitchOpen && (
+          <PitchModalComponent
+            handleClosePitchModal ={handleClosePitchModal}
+          />
+        )}
         <div>{
-            //renders UserCard
-            renderUserCard()}</div>
+          //renders UserCard
+          renderUserCard()}</div>
         <div className={classes.body_container}>
           <div className={classes.bid_section}>
             <YourBids numCompleted="10" numPending="10" numUnread="10" />
@@ -112,8 +130,8 @@ function ArtistPage(props) {
               <div className={classes.bid_divider}></div>
             </div>
             {<div className={`${classes.ml_align} ${classes.bids_container}`}>{
-                //renders Song Bids
-                songBids}</div>}
+              //renders Song Bids
+              songBids}</div>}
           </div>
           <div className={classes.music_section}>
             <YourMusic />

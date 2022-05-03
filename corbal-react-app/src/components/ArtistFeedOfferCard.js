@@ -18,6 +18,10 @@ function ArtistFeedOfferCard(props) {
         props.onClick(props.data);
     }
 
+    const handlePlayOnClick=(event)=>{
+        event.stopPropagation();
+        window.open(track.preview_url)
+    }
 
     return (
         <div className={classes.card} onClick={props.data.status === "Pending" ?  handleOnClick :  null}>
@@ -27,7 +31,7 @@ function ArtistFeedOfferCard(props) {
             <div className={classes.cardImage}>
 
                 <img className={classes.image} src={track.album.images[0].url} />
-                <button className={classes.playButton}>
+                <button className={classes.playButton} onClick={handlePlayOnClick}>
                     <i className={`bi bi-play-btn `}></i>
                 </button>
             </div>

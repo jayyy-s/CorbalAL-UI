@@ -6,7 +6,7 @@
 
 .sideBarContainer{
     height: 100%;
-    flex-basis: 60px;
+    flex-basis: 80px;
     background-color: var(--main-color);
 }
 

@@ -1,0 +1,97 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.66);  }
+
+  .modal {
+    position: fixed;
+    top: 30vh;
+    left: 30%;
+    margin: 0px auto;
+    width: 50%;
+    height: 50%;
+    z-index: 100;
+    overflow: hidden;
+    background: #232D4E;
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 2rem 2rem;
+    border-radius: 30px;
+  }
+
+  .modalTitle{
+      font-weight: bold;
+      font-size:2rem;
+  }
+
+  .modalMessageContainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+
+  .modalMessage{
+    text-align: center;
+    font-weight: 400;
+    font-size:3rem;
+  }
+
+  .divider {
+    margin-top: 10px;
+    background-color: #C4C4C4;
+    height: 1px;
+    margin-bottom: 20px;
+  }
+
+  .formControlSet{
+      display:flex;
+      flex-direction: column;
+  }
+
+  .formRow{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .trackImg {
+      height:125px;
+      width:125px;
+  }
+
+  .modalContainer input, input[disabled] {
+      color: black;
+      background: #EFF0F7;
+      border:none;
+      padding: 0.5rem 0.5rem;
+  }
+
+ .btn_grp{
+     margin: 2rem 0rem;
+     position: relative;
+     display: flex;
+     justify-content:space-between;
+
+ }
+
+ .btn_back{
+     background: #746F73;
+     border-radius:2rem;
+     width: 10rem;
+     height:3rem;
+     border: none;
+     color:white;
+   
+ }
+
+ .btn_submit{
+    background: #4A4AFC;
+    border-radius:2rem;
+    width: 10rem;
+    height:3rem;
+    border: none;
+    color:white;
+}
