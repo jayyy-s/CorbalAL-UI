@@ -22,7 +22,7 @@ function SideBar() {
           </defs>
         </svg>
       </i>,
-      link: "/",
+      link: "/artist/home",
     },
     {
       key: "FEED",

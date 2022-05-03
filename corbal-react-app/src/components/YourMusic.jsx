@@ -4,12 +4,6 @@ import { Link } from "react-router-dom";
 
 function YourMusic(props) {
 
-  const viewAll = [
-    {
-      key: "home",
-      link: "/",
-    }
-  ];
 
   return (
     <div class="YourMusic ml-align">

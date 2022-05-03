@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 
 function YourBids(props) {
 
+  const viewAll = [
+    {
+      key: "home",
+      link: "/",
+    }
+  ];
+
+
 
   return (
     <div class="YourBids ml-align">
 
         <div class="your-bids-text">Your Bids</div>
         <div className="view-all-button" >
-          <Link className="view-all-link" to="/artist/tracks" >View All</Link>
+          <Link className="view-all-link" to="/curator/music" >View All</Link>
         </div>
 
       {/* <div class="bid-info">

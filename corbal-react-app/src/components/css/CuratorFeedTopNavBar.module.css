@@ -19,10 +19,9 @@ ul li{
 }
 
 ul a.active{
-    color: #95bcf0;
+    color: white;
     padding-bottom: 0.25rem;
-    border-bottom: 4px solid #95bcf0;
-}
+    border-bottom: 4px solid #FF7C17;}
 
 .divider{
     height:1px;

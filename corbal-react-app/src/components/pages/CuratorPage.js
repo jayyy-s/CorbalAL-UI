@@ -5,7 +5,7 @@ import SideBar from "../CuratorSideBar";
 import BidInfo from "../BidInfo";
 import CuratorCard from "../CuratorCard"
 import PlaylistInfo from "../PlaylistInfo";
-import YourBids from "../YourBids";
+import YourBids from "../CuratorYourBids";
 import YourPlaylists from "../YourPlaylists";
 import fetchSongs from "../../data/spotify_data";
 import * as LoginActions from "../../actions/user_login";
@@ -15,6 +15,7 @@ import {
 } from 'react-redux';
 import { fetchCuratorBids } from '../../store/curator-bids-slice';
 import { fetchCuratorPlaylists } from '../../store/curator-playlists-slice';
+import classes from '../../components/css/Curator_page.module.css'
 
 import "../css/curator_page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -74,34 +75,35 @@ function CuratorPage(props) {
       totalRevenue="$2 (xD)"
       rank="5"
       noOfTracks={playlist.tracks.total}
+      playlist={playlist}
     />)
   })
 
   return (
-    <div className="app-container">
-      <div className="sideBar-container">
+    <div className={classes.app_container}>
+      <div className={classes.sideBar_container}>
         <SideBar />
       </div>
-      <div className="main-container">
-        <div className="header-container">{
+      <div className={classes.main_container}>
+        <div >{
           //renders UserCard
           renderUserCard()}</div>
-        <div className="body-container">
-          <div className="bid-section">
+        <div className={classes.body_container}>
+          <div className={classes.bid_section}>
             <YourBids numCompleted="10" numPending="10" numUnread="10" />
-            <div class="ml-align">
-              <div class="bids-divider"></div>
+            <div className={classes.ml_align}>
+              <div className={classes.bids_divider}></div>
             </div>
-            {<div className="ml-align">{
+            {<div className={`${classes.ml_align} ${classes.bids_container}`}>{
               //renders Song Bids
               songBids}</div>}
           </div>
-          <div className="music-section">
+          <div className={classes.music_section}>
             <YourPlaylists />
-            <div className="ml-align">
-              <div class="bids-divider"></div>
+            <div className={classes.ml_align}>
+              <div className={classes.bids_divider}></div>
             </div>
-            <div className="ml-align">
+            <div className={`${classes.ml_align} ${classes.music_container}`}>
               {yourPlaylists}
             </div>
           </div>
