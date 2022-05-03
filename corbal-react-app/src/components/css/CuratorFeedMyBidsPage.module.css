@@ -33,3 +33,9 @@
     width: 75%;
     margin-left:1rem;
 }
+
+.curatorFeedBidsWrapper{
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+}

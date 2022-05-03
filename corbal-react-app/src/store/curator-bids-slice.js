@@ -23,7 +23,12 @@ const curatorBidsSlice = createSlice({
         },
         postCuratorBid(state,action){
             state.bids.push(action.payload.bid)
-        }
+        },
+        updateCuratorBid(state,action){
+            state.bids = state.bids.map((bid)=> {
+                   return bid.id === action.payload.bid.id ? action.payload.bid : bid
+              })
+          }
     }
 });
 
@@ -102,6 +107,41 @@ export const postCuratorBid = (bid) => {
         }
     };
 };
+
+export const updateCuratorBid = (bid)=>{
+    return async (dispatch) => {
+
+        const putBid = async () => {
+            const response = await fetch(
+                `${endPoint}/bids/${bid.id}`,
+                {
+                    method : 'PUT',
+                    body: JSON.stringify(bid),
+                    headers: {
+                        "Content-type": "application/json"
+                      }
+                }
+            );
+            if (!response.ok) {
+                throw new Error('Updating bid data failed.');
+            }
+            return await response.json();
+
+        };
+
+        try {
+            const bid = await putBid();
+
+            dispatch(
+                curatorBidsActions.updateCuratorBid({
+                    bid
+                })
+            );
+        } catch (error) {
+            console.log("There was an error updating a bid");
+        }
+    };
+}
 
 
 export default curatorBidsSlice;

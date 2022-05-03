@@ -22,7 +22,7 @@
 }
 
 .bidInfoRow{
-    margin: 1rem 1rem;
+    margin: 0.5rem 1rem;
     display:flex;
     justify-content:space-between;
 }

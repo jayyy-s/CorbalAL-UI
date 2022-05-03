@@ -2,6 +2,7 @@ import classes from './css/CreateBidFormComponent.module.css';
 import { useSelector ,useDispatch } from 'react-redux';
 import {postCuratorBid} from '../store/curator-bids-slice';
 import { GENRES } from '../utilities/constants';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 
@@ -58,6 +59,7 @@ function CreateBidFormComponent(props) {
 
     return (
         <div className={classes.formContainer} style={{ flexGrow: 1 }}>
+            <CloseIcon style={{ position: 'absolute', right: '5px', top: '5px', fontSize: '3rem' }} onClick={ props.closeBidForm} />
             <h3>Create a Bid</h3>
             <div className={classes.pitchDetailContainer}>
                 <img className={classes.pitchImg} src={props.selectedTrack.album.images[0].url} />

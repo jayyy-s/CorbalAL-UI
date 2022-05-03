@@ -1,9 +1,10 @@
 import classes from './css/ArtistRespondBidFormComponent.module.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateArtistOffer } from '../store/artist-offers-slice';
 import { GENRES } from '../utilities/constants';
-import {endPoint} from '../config';
+import { endPoint } from '../config';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 function ArtistRespondBidFormComponent(props) {
@@ -65,27 +66,22 @@ function ArtistRespondBidFormComponent(props) {
 
     }
 
-    const millisToMinutesAndSeconds = (millis) => {
-        var minutes = Math.floor(millis / 60000);
-        var seconds = ((millis % 60000) / 1000).toFixed(0);
-        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-    }
-
-    const handleBidPriceChange = (event) =>{
+    const handleBidPriceChange = (event) => {
         setPrice(event.target.value);
     }
 
-    const handlePlaylistSlotChange= (event) =>{
+    const handlePlaylistSlotChange = (event) => {
         setPlaylistSpot(event.target.value)
     }
 
-    const handleDaysFeaturedChange= (event) =>{
+    const handleDaysFeaturedChange = (event) => {
         setDaysFeatured(event.target.value)
     }
 
 
     return (
         <div className={classes.formContainer} style={{ flexGrow: 1 }}>
+            <CloseIcon style={{ position: 'absolute', right: '5px', top: '5px', fontSize: '3rem' }} onClick={props.closeBidForm} />
             <h3>Respond to Bid</h3>
             <div className={classes.divider}></div>
             <div className={classes.bidDetailContainer}>
@@ -141,7 +137,7 @@ function ArtistRespondBidFormComponent(props) {
                     <div>
                         <div className={classes.formFieldSet}>
                             <label for="length_promotion">Length of Promotion</label>
-                            <input type="number" id="length_promotion" name="length_promotion" placeholder="Length of Promotion" required min={1} onChange={handleDaysFeaturedChange} value={enteredDaysFeatured}  />
+                            <input type="number" id="length_promotion" name="length_promotion" placeholder="Length of Promotion" required min={1} onChange={handleDaysFeaturedChange} value={enteredDaysFeatured} />
                         </div>
                     </div>
                     <div className={classes.form_btn_grp}>

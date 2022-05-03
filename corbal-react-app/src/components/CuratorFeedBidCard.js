@@ -50,10 +50,14 @@ function CuratorFeedBidCard(props) {
         window.open(track.preview_url)
     }
 
+    const handleOnClick = (event) =>{
+        props.onClick(props.data);
+    }
+
     return (
         <>
             {track &&
-                <div className={classes.card}>
+                <div className={classes.card} onClick={props.data.status === "Pending" ?  handleOnClick :  null}>
                     <div className={classes.price}>
                         {`$ ${props.data.price}`}
                     </div>

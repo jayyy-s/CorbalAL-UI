@@ -66,7 +66,7 @@ function CuratorFeedBidsComponent(props) {
             <div className={classes.divider}></div>
             <div className={classes.container}>
                 {/* {offerCards} */}
-                <PaginationComponent  data={bids} RenderComponent={BidCard} dataLimit={4} />
+                <PaginationComponent  data={bids} RenderComponent={BidCard} dataLimit={props.dataLimit} handleOnClick={props.handleOpenForm}/>
             </div>
         </>
     )
