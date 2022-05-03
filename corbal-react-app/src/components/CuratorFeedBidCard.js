@@ -46,6 +46,9 @@ function CuratorFeedBidCard(props) {
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
 
+    const handlePlayOnClick=()=>{
+        window.open(track.preview_url)
+    }
 
     return (
         <>
@@ -57,7 +60,7 @@ function CuratorFeedBidCard(props) {
                     <div className={classes.cardImage}>
 
                         <img className={classes.image} src={track.album.images[0].url} />
-                        <button className={classes.playButton}>
+                        <button className={classes.playButton} onClick={handlePlayOnClick}>
                             <i className={`bi bi-play-btn `}></i>
                         </button>
                     </div>
