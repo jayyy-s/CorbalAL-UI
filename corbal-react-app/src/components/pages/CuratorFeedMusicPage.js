@@ -56,7 +56,7 @@ function CuratorFeedMusicPage(props) {
         const filteredPitches = pitches.filter((pitch) => pitch.genre === genre);
         if (filteredPitches.length > 0) {
             return <div className={`${classes.ml_1}  ${classes.my_1}`}>
-                <MusicComponent pitches={filteredPitches} title={genre} handleCreateBidOnClick={handleCreateBidOnClick} dataLimit={isFormOpen ? 3 : 4} />
+                <MusicComponent pitches={filteredPitches} title={genre} handleCreateBidOnClick={handleCreateBidOnClick} dataLimit={isFormOpen ? 2 : 4} />
             </div>
         }
     })

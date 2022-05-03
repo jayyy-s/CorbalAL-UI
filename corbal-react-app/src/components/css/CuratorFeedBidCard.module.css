@@ -1,6 +1,6 @@
 .card {
   margin: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
   /* background-color: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
@@ -39,7 +39,9 @@
   right: 0;
   top: 0;
   font-size: small;
-  background-color: var(--main-color);
+  color:  #FF7C17;
+  background: rgba(0, 0, 0, 0.5);
+ 
   border-radius: 0px 10px;
 }
 
