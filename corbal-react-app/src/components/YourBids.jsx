@@ -11,26 +11,17 @@ function YourBids(props) {
     }
   ];
 
-  
+
 
   return (
     <div class="YourBids ml-align">
-      <div class="your-bids-wrapper">
+
         <div class="your-bids-text">Your Bids</div>
-        
-          {viewAll.map(({ key, link }) => {
-            return (
-              <div className="view-all-button" >
-                <Link className="view-all-link" to={link} key={key}>View All</Link>
-              </div>
-            );
-          })}
-        
-      </div>
+        <div className="view-all-button" >
+          <Link className="view-all-link" to="/artist/tracks" >View All</Link>
+        </div>
 
-      <div class="bid-info">
-
-        {/* not sure how to format this part correctly*/}
+      {/* <div class="bid-info">
         <div >
           <div class="bid-analytics">{props.numCompleted} Completed</div>
         </div>
@@ -40,7 +31,7 @@ function YourBids(props) {
         <div>
           <div class="bid-analytics">{props.numUnread} Unread</div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

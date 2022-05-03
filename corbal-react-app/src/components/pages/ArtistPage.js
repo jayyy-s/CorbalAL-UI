@@ -16,6 +16,7 @@ import {
 
 import {fetchArtistOffers} from '../../store/artist-offers-slice';
 import {fetchArtistTracks} from '../../store/artist-tracks-slice';
+import classes from '../../components/css/Artist_page.module.css';
 
 import "../css/Artist_page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -58,14 +59,6 @@ function ArtistPage(props) {
     );
   };
 
-  const renderBids = ()=>{
-
-  }
-
-  const renderMusic = () => {
-
-  }
-
 
   // think it would be good if .tracks wasn't used here
   const songs = fetchSongs().tracks;
@@ -83,14 +76,10 @@ function ArtistPage(props) {
   //   return songBid;
   // });
 
-    const songBids = offers.map((offer) => {
+  const songBids = offers.map((bid) => {
     const songBid = (
       <BidInfo
-        key={`${offer.song_id}:${offer.song_name}`}
-        songName={offer.song_name}
-        // genre={`${song.genres[0]}`}
-        playlistPosition={offer.playlist_spot}
-        timeFeatured={offer.days_featured}
+        bid={bid}
       />
     );
     return songBid;
@@ -103,38 +92,35 @@ function ArtistPage(props) {
       genre="GENRE??????"
       totalRevenue="$100"
       totalListens="65"
+      track={track}
     />)
   })
   
-
-  console.log("I'm in artist: ", props);
-
   return (
-    <div className="app-container">
-      <div className="sideBar-container">
+    <div className={classes.app_container}>
+      <div className={classes.sideBar_container}>
         <SideBar />
       </div>
-      <div className="main-container">
-        <div className="header-container">{
+      <div className={classes.main_container}>
+        <div>{
             //renders UserCard
             renderUserCard()}</div>
-        <div className="main-container"></div>
-        <div className="body-container">
-          <div className="bid-section">
+        <div className={classes.body_container}>
+          <div className={classes.bid_section}>
             <YourBids numCompleted="10" numPending="10" numUnread="10" />
-            <div class="ml-align">
-              <div class="bids-divider"></div>
+            <div className={classes.ml_align}>
+              <div className={classes.bid_divider}></div>
             </div>
-            {<div className="ml-align">{
+            {<div className={`${classes.ml_align} ${classes.bids_container}`}>{
                 //renders Song Bids
                 songBids}</div>}
           </div>
-          <div className="music-section">
+          <div className={classes.music_section}>
             <YourMusic />
-            <div className="ml-align">
-              <div class="bids-divider"></div>
+            <div className={classes.ml_align}>
+              <div className={classes.bid_divider}></div>
             </div>
-            <div className="ml-align">{
+            <div className={`${classes.ml_align} ${classes.music_container}`}>{
               yourMusic
             }
             </div>

@@ -13,16 +13,9 @@ function YourMusic(props) {
 
   return (
     <div class="YourMusic ml-align">
-      <div class="your-music-wrapper">
-        <div class="your-bids-text">Your Music</div>
-        
-          {viewAll.map(({ key, link }) => {
-            return (
-              <div className="view-all-button" >
-                <Link className="view-all-link" to={link} key={key}>View All</Link>
-              </div>
-            );
-          })}
+      <div class="your-bids-text">Your Music</div>
+      <div className="view-all-button" >
+        <Link className="view-all-link" to="/artist/tracks" >View All</Link>
       </div>
     </div>
   );

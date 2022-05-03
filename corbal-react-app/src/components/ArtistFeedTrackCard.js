@@ -8,10 +8,14 @@ function ArtistFeedTrackCard(props) {
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
 
+    const handlePlayOnClick=()=>{
+        window.open(props.track.preview_url)
+    }
+
     return (<div className={classes.card}>
         <div className={classes.cardImage}>
             <img className={classes.image} src={props.imageUrl} />
-            <button className={classes.playButton}>
+            <button className={classes.playButton} onClick={handlePlayOnClick}>
                 <i className={`bi bi-play-btn `}></i>
             </button>
         </div>
