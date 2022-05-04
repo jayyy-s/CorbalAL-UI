@@ -37,17 +37,10 @@
 }
 
 .pitch-title {
-  margin-left: auto;
-  margin-right: auto;
-  /* height: 30%; */
-  margin-top: 10px;
-  margin-bottom: 0px;
-
-  /* font-family: "Heebo"; */
+  margin : 10px auto 0px auto;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  /* line-height: 22px; */
 }
 .pitch-button-container {
   justify-content: center;
@@ -98,4 +91,13 @@ img {
   font-size: 14px;
   font-weight: lighter;
   color: white;
+}
+
+.btn-pitch{
+  height: 100%;
+  width: 100%;
+  border:none;
+  background: #28335F;
+  color: white;
+  border-radius:10px;
 }

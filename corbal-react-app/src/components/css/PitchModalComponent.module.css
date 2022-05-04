@@ -9,7 +9,7 @@
   .modal {
     position: fixed;
     top: 30vh;
-    left: 30%;
+    left: 27%;
     margin: 0px auto;
     width: 50%;
     height: 50%;
@@ -94,4 +94,21 @@
     height:3rem;
     border: none;
     color:white;
+}
+
+
+.modalContainer select{
+    background : #CACDE1;
+    border-radius: 10px;
+    border:0px;
+    outline:0px;
+    padding :0.3rem 0.3rem;
+}
+
+.modalContainer input{
+    background : #CACDE1;
+    border-radius: 10px;
+    border:0px;
+    outline:0px;
+    padding :0.3rem 0.3rem;
 }

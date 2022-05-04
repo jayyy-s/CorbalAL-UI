@@ -34,7 +34,7 @@ function ArtistPage(props) {
   useEffect(() => {
     //calling the offers and tracks endpoint 
     dispatch(fetchArtistOffers(user.id));
-    dispatch(fetchArtistTracks(user.id))
+    dispatch(fetchArtistTracks(user.spotify_artist_id))
 
   }, [user]);
 

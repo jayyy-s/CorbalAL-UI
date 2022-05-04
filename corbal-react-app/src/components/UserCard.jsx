@@ -28,8 +28,9 @@ function UserCard(props) {
       </div>
       <div className="pitch-wrapper">
         <div className="pitch-container">
-          <p className="pitch-title">Pitch a Song</p>
-          <div className="pitch-button-container">
+          {/* <p className="pitch-title">Pitch a Song</p> */}
+          <button className="btn-pitch" onClick={props.handleOpenPitchModal}>Pitch a Song</button>
+          {/* <div className="pitch-button-container">
             <button
               className="pitch-button-container"
               onClick={props.handleOpenPitchModal}>
@@ -38,8 +39,8 @@ function UserCard(props) {
             {/* {openPitchModal &&
               <PitchModal
                 closePitchModal={setOpenPitchModal}
-                src={props.src} />} */}
-          </div>
+                src={props.src} />} }
+          </div> */}
         </div>
       </div>
     </div>

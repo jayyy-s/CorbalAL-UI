@@ -7,9 +7,17 @@
 .sortContainer label{
     font-size:small;
     color: white;
+    padding: 0.3rem 0.3rem;
 }
 
 .sortContainer select{
     font-size:small;
-    width : 100px;
+    width : 120px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+    color:white;
+    border: 0px;
+    outline:0px;
+    border-radius: 1rem;
+    padding: 0.3rem 0.3rem;
 }

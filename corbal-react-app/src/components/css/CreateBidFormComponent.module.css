@@ -89,3 +89,19 @@
     background-color: var(--secondary-color);
     color:white
 }
+
+.bidFormContainer select{
+    background : #CACDE1;
+    border-radius: 10px;
+    border:0px;
+    outline:0px;
+    padding: 0.3rem 0.3rem;
+ }
+
+.bidFormContainer input{
+   background : #CACDE1;
+   border-radius: 10px;
+   border:0px;
+   outline:0px;
+   padding :0.3rem 0.3rem;
+}

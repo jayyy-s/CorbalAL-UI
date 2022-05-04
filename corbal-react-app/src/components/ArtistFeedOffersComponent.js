@@ -58,7 +58,7 @@ function ArtistFeedOffersComponent(props) {
     return (
         <>
             <div className={`${classes.ml_1} ${classes.title}`}>
-                <div>
+                <div className={classes.sectionTitle}>
                 {props.title}
                 </div>
                 <SortControl options={[{ option: "Price", value: "Price" }, { option: "Feature Time", value: "Time" }]} onSortInputChange={handleSortInputChange} />

@@ -1,4 +1,5 @@
 import classes from './css/CreateBidFormComponent.module.css';
+import {useState} from 'react';
 import { useSelector ,useDispatch } from 'react-redux';
 import {postCuratorBid} from '../store/curator-bids-slice';
 import { GENRES } from '../utilities/constants';
@@ -9,7 +10,8 @@ import CloseIcon from '@mui/icons-material/Close';
 function CreateBidFormComponent(props) {
 
     const user = useSelector((state)=> state.user.user);
-    const playlists = useSelector((state) => state.curatorPlaylists.playlists)
+    const playlists = useSelector((state) => state.curatorPlaylists.playlists);
+    const [selectedPlaylist, setSelectedPlaylist] = useState(playlists && playlists.length > 0 ? playlists[0] : null )
 
 
     const dispatch = useDispatch();
@@ -42,6 +44,10 @@ function CreateBidFormComponent(props) {
         props.closeBidForm();
     }
 
+    const handleCancelBtnOnClick =(event)=>{
+        
+        props.closeBidForm();
+    }
 
     const millisToMinutesAndSeconds = (millis) => {
         var minutes = Math.floor(millis / 60000);
@@ -56,6 +62,10 @@ function CreateBidFormComponent(props) {
     const playlistOptions = playlists.map((playlist) => {
         return (<option key={playlist.id} value={playlist.id} >{playlist.name}</option>)
     })
+
+    const handlePlaylistChange = (event) =>{
+        setSelectedPlaylist(playlists.filter((playlist)=> playlist.id === event.currentTarget.value)[0]);
+    }
 
     return (
         <div className={classes.formContainer} style={{ flexGrow: 1 }}>
@@ -86,7 +96,7 @@ function CreateBidFormComponent(props) {
                             <label for="playlists">Select Playlist</label>
                             {/* <input type="text" list="playlistsOption" id="playlists" name="playlists" />
                                     <datalist id="playlistsOption">{playlistOptions}</datalist> */}
-                            <select name="playlist_options" id="playlist_options">
+                            <select name="playlist_options" id="playlist_options" onChange={handlePlaylistChange}>
                                 {playlistOptions}
                             </select>
 
@@ -111,7 +121,7 @@ function CreateBidFormComponent(props) {
                             <div className={classes.playlistSpot}>
                                 <input type="number" id="playlist_slot" name="playlist_slot" placeholder="Slot#" required min={1} />
                                 <div className={classes.playlistSpotDiv}>out of</div>
-                                <input type="number" id="playlist_total_slots" name="playlist_total_slots" placeholder="Total Number of Playlists" required min={1} />
+                                <input type="number" id="playlist_total_slots" name="playlist_total_slots" placeholder="Total Number of Playlists" required min={1} disabled value={selectedPlaylist ? selectedPlaylist.tracks.total : 0} />
                             </div>
                         </div>
                     </div>
@@ -122,7 +132,7 @@ function CreateBidFormComponent(props) {
                         </div>
                     </div>
                     <div className={classes.form_btn_grp}>
-                        <button type="button">Cancel</button>
+                        <button type="button" onClick={handleCancelBtnOnClick}>Cancel</button>
                         <button className={classes.btn_submit}>Submit</button>
                     </div>
                 </form>

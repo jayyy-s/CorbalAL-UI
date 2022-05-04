@@ -37,9 +37,9 @@ function ArtistFeedTracksPage(props) {
     //NEEDS TO BE REMOVED
     //for test purposes i am fetching the tracks here.
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchArtistTracks(1));
-    }, []);
+    // useEffect(() => {
+    //     dispatch(fetchArtistTracks());
+    // }, []);
 
     //NEEDS TO BE REMOVED
     //for test purposes

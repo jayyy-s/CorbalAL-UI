@@ -44,11 +44,13 @@ export const fetchArtistTracks = (artistSpotifyId) => {
         try {
             const tracks = await getTracksRequest();
             
-            // const tracks = data.filter(track =>track.artist_id===artistId);
+             const artistTracks = tracks.filter(track =>
+                    track.artists.filter(artist => artist.id === artistSpotifyId).length > 0
+             );
 
             dispatch(
                 artistTracksActions.fetchArtistTracks({
-                    tracks: tracks
+                    tracks: artistTracks
                 })
             );
         } catch (error) {

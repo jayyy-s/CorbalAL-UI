@@ -1275,6 +1275,936 @@
       "track_number": 8,
       "type": "track",
       "uri": "spotify:track:5AKAyMEL5LqCkafztPdBSI"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Isy6kedDrgPYoTS1dazA9"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Isy6kedDrgPYoTS1dazA9",
+          "id": "3Isy6kedDrgPYoTS1dazA9",
+          "name": "Sean Paul",
+          "type": "artist",
+          "uri": "spotify:artist:3Isy6kedDrgPYoTS1dazA9"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 184360,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2sKF6YGV5am5vI6eycPoQX"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2sKF6YGV5am5vI6eycPoQX",
+      "id": "2sKF6YGV5am5vI6eycPoQX",
+      "is_local": false,
+      "name": "Ah Leke (feat. Sean Paul)",
+      "preview_url": "https://p.scdn.co/mp3-preview/29f1022fdf42fc0ff0e4cc2cb8728d7769886c7d?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:2sKF6YGV5am5vI6eycPoQX"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7bXgB6jMjp9ATFy66eO08Z"
+          },
+          "href": "https://api.spotify.com/v1/artists/7bXgB6jMjp9ATFy66eO08Z",
+          "id": "7bXgB6jMjp9ATFy66eO08Z",
+          "name": "Chris Brown",
+          "type": "artist",
+          "uri": "spotify:artist:7bXgB6jMjp9ATFy66eO08Z"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 202306,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6Zo3wgDE076K2AuiGZF3CS"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6Zo3wgDE076K2AuiGZF3CS",
+      "id": "6Zo3wgDE076K2AuiGZF3CS",
+      "is_local": false,
+      "name": "Fun (feat. Chris Brown)",
+      "preview_url": "https://p.scdn.co/mp3-preview/9d5538edd0b86c777c6db2f8bafafaca78903562?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:6Zo3wgDE076K2AuiGZF3CS"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3s73tswJycj6HTBNNN393z"
+          },
+          "href": "https://api.spotify.com/v1/artists/3s73tswJycj6HTBNNN393z",
+          "id": "3s73tswJycj6HTBNNN393z",
+          "name": "John Ryan",
+          "type": "artist",
+          "uri": "spotify:artist:3s73tswJycj6HTBNNN393z"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 236200,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4Y7XAxTANhu3lmnLAzhWJW"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4Y7XAxTANhu3lmnLAzhWJW",
+      "id": "4Y7XAxTANhu3lmnLAzhWJW",
+      "is_local": false,
+      "name": "Fireball (feat. John Ryan)",
+      "preview_url": "https://p.scdn.co/mp3-preview/219b404f7af11f1e6f9952d856284fa8053dcfb5?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:4Y7XAxTANhu3lmnLAzhWJW"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj"
+          },
+          "href": "https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj",
+          "id": "21E3waRsmPlU7jZsS13rcj",
+          "name": "Ne-Yo",
+          "type": "artist",
+          "uri": "spotify:artist:21E3waRsmPlU7jZsS13rcj"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 229360,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2bJvI42r8EF3wxjOuDav4r"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2bJvI42r8EF3wxjOuDav4r",
+      "id": "2bJvI42r8EF3wxjOuDav4r",
+      "is_local": false,
+      "name": "Time of Our Lives",
+      "preview_url": "https://p.scdn.co/mp3-preview/98acede443c4437c1b0feed4e9aa5b6265dd35dd?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:2bJvI42r8EF3wxjOuDav4r"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 192826,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3hm9Df6fGtYVPicuJulXyN"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3hm9Df6fGtYVPicuJulXyN",
+      "id": "3hm9Df6fGtYVPicuJulXyN",
+      "is_local": false,
+      "name": "Celebrate (From the Original Motion Picture \"Penguins of Madagascar\")",
+      "preview_url": "https://p.scdn.co/mp3-preview/dbeb60d771fe83b988e6a40fde864aac19d692d1?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:3hm9Df6fGtYVPicuJulXyN"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/79A4RmgwxYGIDkqQDUHLXK"
+          },
+          "href": "https://api.spotify.com/v1/artists/79A4RmgwxYGIDkqQDUHLXK",
+          "id": "79A4RmgwxYGIDkqQDUHLXK",
+          "name": "Chloe Angelides",
+          "type": "artist",
+          "uri": "spotify:artist:79A4RmgwxYGIDkqQDUHLXK"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 237200,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4QjPFQa2qSqn1GKHwb976V"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4QjPFQa2qSqn1GKHwb976V",
+      "id": "4QjPFQa2qSqn1GKHwb976V",
+      "is_local": false,
+      "name": "Sexy Beaches (feat. Chloe Angelides)",
+      "preview_url": "https://p.scdn.co/mp3-preview/8b601af601e55656dc82b1f1bada5f3266bde5dd?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:4QjPFQa2qSqn1GKHwb976V"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5M2gxYpF3uzcsyifR9WEgE"
+          },
+          "href": "https://api.spotify.com/v1/artists/5M2gxYpF3uzcsyifR9WEgE",
+          "id": "5M2gxYpF3uzcsyifR9WEgE",
+          "name": "Heymous Molly",
+          "type": "artist",
+          "uri": "spotify:artist:5M2gxYpF3uzcsyifR9WEgE"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 188840,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3GfuzCkO8ufIvEA56DVV52"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3GfuzCkO8ufIvEA56DVV52",
+      "id": "3GfuzCkO8ufIvEA56DVV52",
+      "is_local": false,
+      "name": "Day Drinking (feat. Heymous Molly)",
+      "preview_url": "https://p.scdn.co/mp3-preview/33fbdfa02f234ab8bb8f39a37386b1adc35895b4?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:3GfuzCkO8ufIvEA56DVV52"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y"
+          },
+          "href": "https://api.spotify.com/v1/artists/07YZf4WDAMNwqr4jfgOZ8y",
+          "id": "07YZf4WDAMNwqr4jfgOZ8y",
+          "name": "Jason Derulo",
+          "type": "artist",
+          "uri": "spotify:artist:07YZf4WDAMNwqr4jfgOZ8y"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5gCRApTajqwbnHHPbr2Fpi"
+          },
+          "href": "https://api.spotify.com/v1/artists/5gCRApTajqwbnHHPbr2Fpi",
+          "id": "5gCRApTajqwbnHHPbr2Fpi",
+          "name": "Juicy J",
+          "type": "artist",
+          "uri": "spotify:artist:5gCRApTajqwbnHHPbr2Fpi"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 230360,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/34en17vDgo4EoaFMQ0q1zk"
+      },
+      "href": "https://api.spotify.com/v1/tracks/34en17vDgo4EoaFMQ0q1zk",
+      "id": "34en17vDgo4EoaFMQ0q1zk",
+      "is_local": false,
+      "name": "Drive You Crazy (feat. Jason Derulo & Juicy J)",
+      "preview_url": "https://p.scdn.co/mp3-preview/768de0164b0cf88a7fe1dc1aa373a0ecb11a413b?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:34en17vDgo4EoaFMQ0q1zk"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Yl4nkmEa8BSuGWbwhdLDq"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Yl4nkmEa8BSuGWbwhdLDq",
+          "id": "3Yl4nkmEa8BSuGWbwhdLDq",
+          "name": "G.R.L.",
+          "type": "artist",
+          "uri": "spotify:artist:3Yl4nkmEa8BSuGWbwhdLDq"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 203160,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2J4Alm5zUad4hB5bY2HhtV"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2J4Alm5zUad4hB5bY2HhtV",
+      "id": "2J4Alm5zUad4hB5bY2HhtV",
+      "is_local": false,
+      "name": "Wild Wild Love (feat. G.R.L.)",
+      "preview_url": "https://p.scdn.co/mp3-preview/d6ed9db09e59dfde6565ca5a32ff495607b214f4?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:2J4Alm5zUad4hB5bY2HhtV"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+            },
+            "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull",
+            "type": "artist",
+            "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2014 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886444753852"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+        "id": "4EUf4YyNjuXypWY6W5wEDm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e340d1480e7bb29a45e3bd7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021e340d1480e7bb29a45e3bd7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511e340d1480e7bb29a45e3bd7",
+            "width": 64
+          }
+        ],
+        "label": "Mr.305/Polo Grounds Music/RCA Records",
+        "name": "Globalization",
+        "popularity": 81,
+        "release_date": "2014-11-21",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+          },
+          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+          "id": "0TnOYISbd1XYRBk9myaseg",
+          "name": "Pitbull",
+          "type": "artist",
+          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/64M6ah0SkkRsnPGtGiRAbb"
+          },
+          "href": "https://api.spotify.com/v1/artists/64M6ah0SkkRsnPGtGiRAbb",
+          "id": "64M6ah0SkkRsnPGtGiRAbb",
+          "name": "Bebe Rexha",
+          "type": "artist",
+          "uri": "spotify:artist:64M6ah0SkkRsnPGtGiRAbb"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 204960,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1n9ihgANQtldosKV142hBz"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1n9ihgANQtldosKV142hBz",
+      "id": "1n9ihgANQtldosKV142hBz",
+      "is_local": false,
+      "name": "This Is Not A Drill (feat. Bebe Rexha)",
+      "preview_url": "https://p.scdn.co/mp3-preview/51b9c9786e2d3a2d1deb18ad865525121a6eb69e?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:1n9ihgANQtldosKV142hBz"
     }
   ],
   "bids": [
@@ -1502,6 +2432,15 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adip",
       "genre": "ROCK",
       "created_at": "2022-04-25 15:23:44"
+    },
+    {
+      "artist_id": 1,
+      "song_id": "3GfuzCkO8ufIvEA56DVV52",
+      "song_name": "Day Drinking (feat. Heymous Molly)",
+      "genre": "Pop",
+      "description": "Lorem ipsum dolor sit amet, consectetur adip",
+      "created_at": "2022-05-04 03:34:09",
+      "id": 13
     }
   ],
   "users": [
@@ -1547,7 +2486,7 @@
       "lastName": "Paul",
       "age": 25,
       "location": "Boston",
-      "email": "artist@example.com",
+      "email": "adele@example.com",
       "phone": "12345689",
       "role": "artist",
       "spotify_artist_id": "4dpARuHxo51G3z768sgnrY",

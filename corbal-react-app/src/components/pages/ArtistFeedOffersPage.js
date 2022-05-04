@@ -28,10 +28,10 @@ function ArtistFeedOffersPage(props) {
     //NEEDS TO BE REMOVED
     //for test purposes i am fetching the tracks here.
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchArtistTracks(1));
-        dispatch(fetchArtistOffers(1));
-    }, []);
+    // useEffect(() => {
+    //     dispatch(fetchArtistTracks(1));
+    //     dispatch(fetchArtistOffers(1));
+    // }, []);
 
     const getPendingOffers = () => {
         return artistOffers.filter((offer) => offer.status !== 'Completed')
