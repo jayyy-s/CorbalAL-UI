@@ -1,26 +1,21 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import SideBar from "../CuratorSideBar";
 import BidInfo from "../BidInfo";
 import CuratorCard from "../CuratorCard"
 import PlaylistInfo from "../PlaylistInfo";
-import YourBids from "../CuratorYourBids";
-import YourPlaylists from "../YourPlaylists";
-import fetchSongs from "../../data/spotify_data";
-import * as LoginActions from "../../actions/user_login";
-import {
-  useSelector,
-  useDispatch
-} from 'react-redux';
+import DashboardSectionTitle from "../DashboardSectionTitle";
+import { useSelector, useDispatch} from 'react-redux';
 import { fetchCuratorBids } from '../../store/curator-bids-slice';
 import { fetchCuratorPlaylists } from '../../store/curator-playlists-slice';
 import classes from '../../components/css/Curator_page.module.css'
 
-import "../css/curator_page.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
+/**
+ * CuratorPage functional component which is rendered as the Curator Dashboard.
+ * We display the bids the curator has made and the playlists they manage.
+ * @param {object} props 
+ * @returns 
+ */
 function CuratorPage(props) {
 
   const user = useSelector((state) => state.user.user);
@@ -29,8 +24,10 @@ function CuratorPage(props) {
   const dispatch = useDispatch();
 
 
+  /**
+   * This effect functions to fetch the bids and playlists of the curator.
+   */
   useEffect(() => {
-    //call the bids and playlists endpoint
     dispatch(fetchCuratorBids(user.id));
     dispatch(fetchCuratorPlaylists(user.spotify_user_id));
   }, [user]);
@@ -58,24 +55,26 @@ function CuratorPage(props) {
   };
 
 
-
+  /**
+   * Constructing the bidinfo card for each bid of the curator
+   */
   const songBids = bids.map((bid) => {
     const songBid = (
       <BidInfo
         bid={bid}
+        key={bid.id}
       />
     );
     return songBid;
   });
 
+  /**
+   * Constructing the playlistinfo card for each playlist of the curator
+   */
   const yourPlaylists = playlists.map((playlist) => {
     return (<PlaylistInfo
-      playlistName={playlist.name}
-      genre="GENRE??????"
-      totalRevenue="$2 (xD)"
-      rank="5"
-      noOfTracks={playlist.tracks.total}
       playlist={playlist}
+      key={playlist.id}
     />)
   })
 
@@ -90,20 +89,19 @@ function CuratorPage(props) {
           renderUserCard()}</div>
         <div className={classes.body_container}>
           <div className={classes.bid_section}>
-            <YourBids numCompleted="10" numPending="10" numUnread="10" />
+            <DashboardSectionTitle title="Your Bids" link="/curator/my-bids" />
             <div className={classes.ml_align}>
               <div className={classes.bids_divider}></div>
             </div>
             {<div className={`${classes.ml_align} ${classes.bids_container}`}>{
-              //renders Song Bids
               songBids}</div>}
           </div>
-          <div className={classes.music_section}>
-            <YourPlaylists />
+          <div className={classes.playlist_section}>
+          <DashboardSectionTitle title="Your Playlists" link="/curator/music" />
             <div className={classes.ml_align}>
               <div className={classes.bids_divider}></div>
             </div>
-            <div className={`${classes.ml_align} ${classes.music_container}`}>
+            <div className={`${classes.ml_align} ${classes.playlist_container}`}>
               {yourPlaylists}
             </div>
           </div>
@@ -113,17 +111,5 @@ function CuratorPage(props) {
   );
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(LoginActions, dispatch),
-  };
-}
-
-// function mapStateToProps(state) {
-//   return {
-//     user: state.login.user,
-//   };
-// }
 
 export default CuratorPage;
-// export default connect(mapStateToProps, mapDispatchToProps)(CuratorPage);

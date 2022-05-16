@@ -8,7 +8,11 @@ import BidsComponent from '../CuratorFeedCompletedBidsComponent';
 import SideBar from '../CuratorSideBar';
 import { fetchCompletedBids } from '../../store/completed-bids-slice';
 
-
+/**
+ * A functional component to render the completed bids component of the curator feed.
+ * @param {object} props 
+ * @returns 
+ */
 function CuratorFeedCompletedBidsPage(props) {
 
     const [bids, setBids] = useState([]);
@@ -16,32 +20,13 @@ function CuratorFeedCompletedBidsPage(props) {
     const [isSorted, setIsSorted] = useState(false);
     const completedBids = useSelector((state) => state.completedBids.bids);
 
-    // for PROD
-    // useEffect(() => {
-    //     const sortedBids=[...completedBids];
-    //     sortedBids.sort((a, b) => {
-    //         const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-    //         const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-    //         if (nameA < nameB) {
-    //           return -1;
-    //         }
-    //         if (nameA > nameB) {
-    //           return 1;
-    //         }
-    //         // names must be equal
-    //         return 0;
-    //       })
-    //     setBids(sortedBids);
-    // },[completedBids]);
-
     //Fetching all completed bids
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchCompletedBids());
     }, []);
 
-    //NEEDS TO BE REMOVED
-    //for test purposes
+ 
     useEffect(() => {
         const sortedBids = [...completedBids];
         sortedBids.sort((a, b) => {
@@ -58,7 +43,6 @@ function CuratorFeedCompletedBidsPage(props) {
         })
         setBids(sortedBids);
         setIsSorted(true);
-        // handleSortInputChange(sortOption);
     }, [completedBids])
 
 

@@ -4,8 +4,6 @@
   top: 0px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
-  /* box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 3px 6px 0px rgba(75, 81, 91, 0.5); */
   margin-top: 16px;
   display: flex;
   align-items: center;
@@ -32,6 +30,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  column-gap: 15px;
 }
 
 .bidPrice {

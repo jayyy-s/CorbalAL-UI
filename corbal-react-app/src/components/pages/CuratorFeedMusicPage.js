@@ -10,7 +10,11 @@ import { GENRES } from '../../utilities/constants';
 import CreateBidFormComponent from '../CreateBidFormComponent';
 
 
-
+/**
+ * A functional component to render the pitches aka the music component of the curator feed.
+ * @param {object} props 
+ * @returns 
+ */
 function CuratorFeedMusicPage(props) {
 
     const [pitches, setPitches] = useState([]);
@@ -25,33 +29,43 @@ function CuratorFeedMusicPage(props) {
     // setCompletedOffers(artistOffers.filter((offer)=> offer.status === 'Completed'));
     // },[artistOffers]);
 
-    //NEEDS TO BE REMOVED
-    //for test purposes i am fetching the tracks here.
     const dispatch = useDispatch();
 
-    //fetching pitches from DB every time the component renders
+    //fetching pitches from DB for the first time the component renders
     useEffect(() => {
         dispatch(fetchPitches());
     }, []);
 
-    //if allPitches changes then reset the pitches
+    //This effect runs if allPitches changes and it resets the pitches to be displayed.
     useEffect(() => {
         setPitches(allPitches);
     }, [allPitches])
 
-
+    /**
+     * A function to open the form and set the selectedPitch and selectedTrack
+     * @param {object} pitch 
+     * @param {object} track 
+     */
     const handleCreateBidOnClick = (pitch, track) => {
         setIsFormOpen(true);
         setSelectedPitch(pitch);
         setSelectedTrack(track);
     }
 
+    /**
+     * A function to close the form and reset the selectedPitch and selectedTrack
+     * @param {object} pitch 
+     * @param {object} track 
+     */
     const handleCloseBidOnClick = () => {
         setIsFormOpen(false);
         setSelectedPitch(null);
         setSelectedTrack(null);
     }
 
+    /**
+     * Constructing the MusicComponents for each type of Genre available in the system.
+     */
     const genreSections = GENRES.map((genre) => {
         const filteredPitches = pitches.filter((pitch) => pitch.genre === genre);
         if (filteredPitches.length > 0) {
@@ -61,6 +75,10 @@ function CuratorFeedMusicPage(props) {
         }
     })
 
+    /**
+     * A function to search for a particular pitch
+     * @param {string} searchText 
+     */
     const handleSearchInputChange = (searchText) => {
         if (searchText.length > 0) {
             const filteredPitches = allPitches.filter((pitch) => pitch.song_name.toLowerCase().includes(searchText.toLowerCase()));

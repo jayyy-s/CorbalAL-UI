@@ -10,18 +10,16 @@ function CuratorFeedMusicComponent(props) {
     const [sortOption, setSortOption] = useState('Price');
     const [isSorted, setIsSorted] = useState(false);
 
+    /**
+     * This effect essentially runs only once to set the pitches in the music component.
+     */
     useEffect(()=>{
      setPitches(props.pitches); 
      setIsSorted(false);  
     },[props]);
 
-    // const pitchCards = pitches.map((pitch) => {
-    //     return (
-    //         <PitchCard key={pitch.id} pitch={pitch} />
-    //     )
-    // })
 
-        /**
+    /**
      * Function to sort the pitches everytime the component rerenders.
      * Sorting occurs only when the isSorted Option is set to false.
      * This will cause a component rerender.

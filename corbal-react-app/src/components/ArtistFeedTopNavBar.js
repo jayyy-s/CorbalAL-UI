@@ -1,6 +1,11 @@
 import classes from './css/ArtistFeedTopNavBar.module.css'
 import { NavLink } from "react-router-dom";
 
+/**
+ * A functional component to render the top navigation bar for the Artist Feed.
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistFeedTopNavBar(props){
    return( 
        <>

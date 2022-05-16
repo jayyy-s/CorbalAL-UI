@@ -1,13 +1,23 @@
-import "./css/bidInfo.css";
 import classes from '../components/css/BidInfo.module.css';
 import { useEffect, useState } from 'react';
 import { spotifyToken } from '../utilities/constants';
-import { ReactComponent as Card } from '../assets/BidInfo.svg';
 
+/**
+ * A functional component which is used to render the card displaying information of the offer/bid.
+ * @param {object} props 
+ * @returns 
+ */
 function BidInfo(props) {
 
   const [track, setTrack] = useState(null);
-  //fetching the track from the db based on the song id
+
+  /**
+   * This effect runs only once when the component is rendered.
+   * We fetch the track information from spotify.
+   * 
+   * Note: This can be modified to hit an endpoint in our backend.
+   * Our backend would then fetch the track from the relevant API(spotify, apple music etc) and give back a response.
+   */
   useEffect(() => {
 
     if (props.bid) {

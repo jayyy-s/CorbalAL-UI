@@ -10,7 +10,11 @@ import OffersComponent from '../ArtistFeedOffersComponent';
 import ArtistRespondBidFormComponent from '../ArtistRespondBidFormComponent';
 
 
-
+/**
+ * A functional component to render the Offers component of the Artist Feed
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistFeedOffersPage(props) {
 
     const [offersPending, setPendingOffers] = useState([]);
@@ -19,17 +23,13 @@ function ArtistFeedOffersPage(props) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [selectedOffer, setSelectedOffer] = useState(null);
 
-    // for PROD
-    // useEffect(() => {
-    // setPendingOffers(artistOffers.filter((offer)=> offer.status !== 'Completed'));
-    // setCompletedOffers(artistOffers.filter((offer)=> offer.status === 'Completed'));
-    // },[artistOffers]);
-
-    //NEEDS TO BE REMOVED
-    //for test purposes i am fetching the tracks here.
     const dispatch = useDispatch();
+
+
+
+    //FOR DEVELOPMENT/TESTING PURPOSE
+    //for test purposes i am fetching the tracks here by hardcoding an artist id
     // useEffect(() => {
-    //     dispatch(fetchArtistTracks(1));
     //     dispatch(fetchArtistOffers(1));
     // }, []);
 
@@ -41,13 +41,20 @@ function ArtistFeedOffersPage(props) {
         return artistOffers.filter((offer) => offer.status === 'Completed')
     }
 
-    //NEEDS TO BE REMOVED
-    //for test
+    /**
+     * artistOffers would be available as we are fetching the artist offers when the user logs in.
+     * Therefore, this effect would run only once (because artistOffers won't change) i.e. when the component is rendered.
+     */
     useEffect(() => {
         setPendingOffers(getPendingOffers());
         setCompletedOffers(getCompletedOffers());
     }, [artistOffers]);
 
+    /**
+     * Function to search for offer.
+     * This will cause a rerender of the component.
+     * @param {string} searchText 
+     */
     const handleSearchInputChange = (searchText) => {
         if (searchText.length > 0) {
             const filteredPendingOffers = artistOffers.filter((offer) => offer.status !== 'Completed' && offer.song_name.toLowerCase().includes(searchText.toLowerCase()));
@@ -62,12 +69,18 @@ function ArtistFeedOffersPage(props) {
         }
     }
 
+    /**
+     * A function to open the form.
+     * @param {object} offer 
+     */
     const handleOpenForm = (offer) => {
         setIsFormOpen(true);
         setSelectedOffer(offer);
     }
 
-
+    /**
+     * A function to close the form.
+     */
     const handleCloseForm = () => {
         setIsFormOpen(false);
         setSelectedOffer(null);

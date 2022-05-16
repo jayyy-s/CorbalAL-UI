@@ -23,16 +23,18 @@
 
   .playButton{
     position: absolute;
-    bottom:2px;
-    right:2px;
+    bottom:0px;
+    right: 0px;
     border:none;
     border-radius:0.5rem;
+    cursor: pointer;
   }
 
   .duration{
     font-size: x-small;
     position: relative;
-    left:135px;
+    left:150px;
+    width:fit-content;
   }
 
   .trackName{

@@ -4,6 +4,11 @@ import classes from './css/ArtistFeedOffersComponent.module.css';
 import PaginationComponent from './PaginationComponent';
 import {useState, useEffect} from 'react';
 
+/**
+ * A functional component to render the offer cards.
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistFeedOffersComponent(props) {
 
     const [offers, setOffers] = useState(props.offers);
@@ -15,13 +20,8 @@ function ArtistFeedOffersComponent(props) {
      setIsSorted(false);  
     },[props]);
 
-    const offerCards = offers.map((offer) => {
-        return (
-            <OfferCard key={offer.id} offer={offer} />
-        )
-    })
 
-        /**
+    /**
      * Function to sort the offers everytime the component rerenders.
      * Sorting occurs only when the isSorted Option is set to false.
      * This will cause a component rerender.
@@ -65,7 +65,6 @@ function ArtistFeedOffersComponent(props) {
             </div>
             <div className={classes.divider}></div>
             <div className={classes.container}>
-                {/* {offerCards} */}
                 <PaginationComponent  data={offers} RenderComponent={OfferCard} dataLimit={props.dataLimit} handleOnClick={props.handleOpenForm} />
             </div>
         </>

@@ -37,7 +37,7 @@
 .bid_section {
   display: flex;
   flex-direction: column;
-  flex-grow : 3;
+  flex-basis: 60%;
 }
 
 .bids_divider {
@@ -47,10 +47,11 @@
   margin-bottom: 20px;
 }
 
-.music_section {
+.playlist_section {
   display: flex;
   flex-direction: column;
-  flex-grow:1;
+  flex-grow: 1;
+  flex-basis: 40%;
   margin-right: 30px;
   border-radius: 1rem;
 }
@@ -61,7 +62,8 @@
   overflow:scroll;
 }
 
-.music_container{
+.playlist_container{
   height: 50vh;
   overflow:scroll;
+
 }

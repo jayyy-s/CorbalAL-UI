@@ -8,7 +8,11 @@ import { fetchCuratorBids } from '../../store/curator-bids-slice';
 import BidsComponent from '../CuratorFeedBidsComponent';
 import CuratorRespondBidFormComponent from '../CuratorRespondBidFormComponent';
 
-
+/**
+ * A functional component to render the my-bids component of the curator feed.
+ * @param {object} props 
+ * @returns 
+ */
 function CuratorFeedMyBidsPage(props) {
 
     const [bidsPending, setPendingBids] = useState([]);
@@ -18,21 +22,18 @@ function CuratorFeedMyBidsPage(props) {
     const [selectedBid, setSelectedBid] = useState(null);
 
 
-    // for PROD
+
+
+    //FOR DEVELOPMENT PURPOSE
+    //for test purposes i am fetching the bids here by hardcoding a curator id.
+    // const dispatch = useDispatch();
     // useEffect(() => {
-    // setPendingBids(curatorBids.filter((bid)=> bid.status !== 'Completed'));
-    // setCompletedBids(curatorBids.filter((bid)=> bid.status === 'Completed'));
-    // },[curatorBids]);
+    //     dispatch(fetchCuratorBids(2));
+    // }, []);
 
-    //NEEDS TO BE REMOVED
-    //for test purposes i am fetching the bids here.
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchCuratorBids(2));
-    }, []);
-
-    //NEEDS TO BE REMOVED
-    //for test
+    /**
+     * This effect is used to set the no of Pending Bids and no Of Completed Bids
+     */
     useEffect(() => {
         setPendingBids(getPendingBids());
         setCompletedBids(getCompletedBids());
@@ -46,8 +47,10 @@ function CuratorFeedMyBidsPage(props) {
         return curatorBids.filter((bid) => bid.status === 'Completed')
     }
 
-
-
+    /**
+     * A function to search for a bid.
+     * @param {string} searchText 
+     */
     const handleSearchInputChange = (searchText) => {
         if (searchText.length > 0) {
             const filteredPendingBids = curatorBids.filter((bid) => bid.status !== 'Completed' && bid.song_name.toLowerCase().includes(searchText.toLowerCase()));
@@ -62,12 +65,18 @@ function CuratorFeedMyBidsPage(props) {
         }
     }
 
+    /**
+     * A function to open the re-negotiation form
+     * @param {object} bid 
+     */
     const handleOpenForm = (bid) => {
         setIsFormOpen(true);
         setSelectedBid(bid);
     }
 
-
+    /**
+     * A function to close the re-negotiation form
+     */
     const handleCloseForm = () => {
         setIsFormOpen(false);
         setSelectedBid(null);

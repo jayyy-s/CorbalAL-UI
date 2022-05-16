@@ -1,27 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { bindActionCreators } from "redux";
 import SideBar from "../SideBar";
 import BidInfo from "../BidInfo";
 import SongInfo from "../SongInfo";
 import UserCard from "../UserCard";
-import YourBids from "../YourBids";
-import YourMusic from "../YourMusic";
-import fetchSongs from "../../data/spotify_data";
-import * as LoginActions from "../../actions/user_login";
-import {
-  useSelector,
-  useDispatch
-} from 'react-redux';
-
+import DashboardSectionTitle from "../DashboardSectionTitle";
+import {useSelector,useDispatch} from 'react-redux';
 import { fetchArtistOffers } from '../../store/artist-offers-slice';
 import { fetchArtistTracks } from '../../store/artist-tracks-slice';
 import classes from '../../components/css/Artist_page.module.css';
 import PitchModalComponent from '../PitchModalComponent';
 
-// import "../css/Artist_page.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap-icons/font/bootstrap-icons.css";
-
+/**
+ * The ArtistPage functional component is rendered as the Artist Dashboard when the first login.
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistPage(props) {
 
   const user = useSelector((state) => state.user.user);
@@ -30,7 +23,9 @@ function ArtistPage(props) {
   const [isPitchOpen, setIsPitchOpen] = useState(false);
   const dispatch = useDispatch();
 
-
+  /**
+   * This effect is used to fetch the offers and the songs of the artist.
+   */
   useEffect(() => {
     //calling the offers and tracks endpoint 
     dispatch(fetchArtistOffers(user.id));
@@ -38,10 +33,16 @@ function ArtistPage(props) {
 
   }, [user]);
 
+  /**
+   * A function to open pitch a song modal
+   */
   const handleOpenPitchModal = ()=>{
     setIsPitchOpen(true);
   }
 
+    /**
+   * A function to close pitch a song modal
+   */
   const handleClosePitchModal = ()=>{
     setIsPitchOpen(false);
   }
@@ -70,39 +71,26 @@ function ArtistPage(props) {
   };
 
 
-  // think it would be good if .tracks wasn't used here
-  const songs = fetchSongs().tracks;
-
-  // const songBids = [...songs].map((song) => {
-  //   const songBid = (
-  //     <BidInfo
-  //       key={`${song.uri}:${song.name}`}
-  //       songName={song.name}
-  //       genre={`${song.genres[0]}`}
-  //       playlistPosition="1"
-  //       timeFeatured="3 days"
-  //     />
-  //   );
-  //   return songBid;
-  // });
-
+  /**
+   * Constructs the BidInfo cards for the offers available to the artist.
+   */
   const songBids = offers.map((bid) => {
     const songBid = (
       <BidInfo
         bid={bid}
+        key={bid.id}
       />
     );
     return songBid;
   });
 
+  /**
+   * Constructs the SongInfo cards for the tracks of the artist.
+   */
   const yourMusic = tracks.map((track) => {
     return (<SongInfo
-      songName={track.name}
-      popularity={track.popularity}
-      genre="GENRE??????"
-      totalRevenue="$100"
-      totalListens="65"
       track={track}
+      key={track.id}
     />)
   })
 
@@ -125,7 +113,7 @@ function ArtistPage(props) {
           renderUserCard()}</div>
         <div className={classes.body_container}>
           <div className={classes.bid_section}>
-            <YourBids numCompleted="10" numPending="10" numUnread="10" />
+            <DashboardSectionTitle title="Your Offers" link="/artist/offers" />
             <div className={classes.ml_align}>
               <div className={classes.bid_divider}></div>
             </div>
@@ -134,7 +122,7 @@ function ArtistPage(props) {
               songBids}</div>}
           </div>
           <div className={classes.music_section}>
-            <YourMusic />
+            <DashboardSectionTitle title="Your Music" link="/artist/tracks" />
             <div className={classes.ml_align}>
               <div className={classes.bid_divider}></div>
             </div>
@@ -149,17 +137,5 @@ function ArtistPage(props) {
   );
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(LoginActions, dispatch),
-  };
-}
-
-function mapStateToProps(state) {
-  return {
-    user: state.login.user,
-  };
-}
 
 export default ArtistPage;
-//export default connect(mapStateToProps, mapDispatchToProps)(ArtistPage);

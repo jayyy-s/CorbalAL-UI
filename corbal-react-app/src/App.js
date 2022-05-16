@@ -1,7 +1,6 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import LogIn from "./components/pages/LogIn";
-// import Playlist from "./components/pages/Playlist";
 import ArtistPage from "./components/pages/ArtistPage";
 import CuratorPage from "./components/pages/CuratorPage";
 import ArtistFeedTracksPage from "./components/pages/ArtistFeedTracksPage";
@@ -10,6 +9,10 @@ import CuratorFeedMusicPage from  "./components/pages/CuratorFeedMusicPage";
 import CuratorFeedMyBidsPage from "./components/pages/CuratorFeedMyBidsPage";
 import CuratorFeedCompletedBidsPage from "./components/pages/CuratorFeedCompletedBidsPage";
 
+/**
+ * The App Component serves as the Single Page where we render different components
+ * based on the url.
+ */
 class App extends React.Component {
   render() {
     return (
@@ -17,7 +20,6 @@ class App extends React.Component {
 
         <Routes>
           <Route path="/" element={<LogIn />} />
-          {/* <Route path="/playlists" element={<Playlist />} /> */}
           <Route path="/artist/home" element={<ArtistPage />} />
           <Route path="/curator/home" element={<CuratorPage />} />
           <Route path="/artist/tracks" element={<ArtistFeedTracksPage />} />

@@ -1,6 +1,11 @@
 import classes from './css/ArtistFeedTracksComponent.module.css';
 import TrackCard from './ArtistFeedTrackCard';
 
+/**
+ * A functional component that renders the TrackCards.
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistFeedTracksComponent(props){
     
     const trackCards = props.tracks.map((track) => { return(

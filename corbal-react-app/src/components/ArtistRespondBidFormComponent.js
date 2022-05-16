@@ -6,7 +6,11 @@ import { GENRES } from '../utilities/constants';
 import { endPoint } from '../config';
 import CloseIcon from '@mui/icons-material/Close';
 
-
+/**
+ * A functional component that renders the respond form.
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistRespondBidFormComponent(props) {
 
     const [enteredPlaylistSpot, setPlaylistSpot] = useState(props.offer.playlist_spot);
@@ -15,6 +19,10 @@ function ArtistRespondBidFormComponent(props) {
 
     const dispatch = useDispatch();
 
+    /**
+     * A function to handle the accept button on click.
+     * @param {object} event 
+     */
     const handleAcceptBtnOnClick = async (event) => {
         event.preventDefault();
 
@@ -28,6 +36,10 @@ function ArtistRespondBidFormComponent(props) {
         props.closeBidForm();
     }
 
+    /**
+     * A function to handle the submit button on click
+     * @param {object} event 
+     */
     const handleRenegotiateFormSubmit = async (event) => {
         event.preventDefault();
 

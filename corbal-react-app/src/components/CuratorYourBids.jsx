@@ -1,37 +1,23 @@
 import React from "react";
-import "./css/yourBids.css";
+import classes from "./css/DashboardSectionTitle.module.css";
 import { Link } from "react-router-dom";
 
+/**
+ * A functional component to render the title and the view all button.
+ * 
+ * Note : This component can be modified to render a different style if needed.
+ * @param {object} props 
+ * @returns 
+ */
 function YourBids(props) {
-
-  const viewAll = [
-    {
-      key: "home",
-      link: "/",
-    }
-  ];
-
 
 
   return (
-    <div class="YourBids ml-align">
-
-        <div class="your-bids-text">Your Bids</div>
-        <div className="view-all-button" >
-          <Link className="view-all-link" to="/curator/music" >View All</Link>
+    <div className={classes.container}>
+        <div className={classes.title}>Your Bids</div>
+        <div className={classes.view_all_button} >
+          <Link className={classes.view_all_link} to="/curator/my-bids" >View All</Link>
         </div>
-
-      {/* <div class="bid-info">
-        <div >
-          <div class="bid-analytics">{props.numCompleted} Completed</div>
-        </div>
-        <div >
-          <div class="bid-analytics">{props.numPending} Pending</div>
-        </div>
-        <div>
-          <div class="bid-analytics">{props.numUnread} Unread</div>
-        </div>
-      </div> */}
     </div>
   );
 }

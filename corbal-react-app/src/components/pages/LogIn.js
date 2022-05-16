@@ -1,33 +1,31 @@
 import "../css/login.css";
 import React from "react";
-import * as LoginActions from "../../actions/user_login";
-import {
-  connect
-} from "react-redux";
-import {
-  bindActionCreators
-} from "redux";
-import {
-  getAuthCode
-} from "../../scripts/spotifyAuthorization";
+import { getAuthCode } from "../../scripts/spotifyAuthorization";
 import {
   useNavigate
 } from "react-router-dom";
-import {
-  useState,
-  useEffect
-} from "react";
-import {
-  useSelector,
-  useDispatch
-} from 'react-redux';
-import {
-  fetchUser
-} from '../../store/user-slice';
+import { useState,useEffect} from "react";
+import { useSelector,useDispatch} from 'react-redux';
+import { fetchUser} from '../../store/user-slice';
 
 // login script
 import loginAuthentication from "../../scripts/loginAuth";
 
+/**
+ * Dummy login page to login as an artist or curator.
+ * Used only for development purposes.
+ * 
+ * If using data from db.json enter the following to login as an artist
+ * email : artist@example.com
+ * password: 1234
+ * 
+ * If using data from db.json enter the following to login as an curator
+ * email : curator@example.com
+ * password: 1234
+ *  
+ * @param {object} props 
+ * @returns 
+ */
 function LogIn(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,6 +36,9 @@ function LogIn(props) {
   let navigate = useNavigate();
 
 
+  /**
+   * This hook runs everytime the user changes.
+   */
   useEffect(() => {
     if (user && user.id !== -1) {
       if (user.role=== "artist")
@@ -56,26 +57,6 @@ function LogIn(props) {
   const loginButton = (e) => {
     e.preventDefault(); //prevents reload
     dispatch(fetchUser(email, password))
-    //commenting omar's code
-    // const response = loginAuthentication(email, password);
-
-
-    // if (response.error) {
-    //   setError(true);
-    //   setErrorMsg(response.error);
-    // } else {
-    //   //adds it to redux
-    //   props.actions.user_login(response);
-    //   // if something == artist -> path = /artist/home
-    //   // if ... curator ... /curator/home
-
-    //   // const username = response.username;
-    //   const isArtist = email === "artist" || email === "WHAT";
-    //   const path = (isArtist) ? "/artist/home" : "/curator/home";
-    //   navigate(path);
-    // }
-    
-
   };
 
   return (  <div className="login-main-container">
@@ -120,17 +101,4 @@ function LogIn(props) {
 </div>);
   }
 
-  // function mapStateToProps(state) {
-  //   return {
-  //     //user: state.user,
-  //   };
-  // }
-
-  function mapDispatchToProps(dispatch) {
-    return {
-      actions: bindActionCreators(LoginActions, dispatch),
-    };
-  }
-
   export default LogIn;
-  //export default connect(null, mapDispatchToProps)(LogIn);

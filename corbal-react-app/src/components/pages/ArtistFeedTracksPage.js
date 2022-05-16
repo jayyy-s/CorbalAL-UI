@@ -9,6 +9,11 @@ import SideBar from '../SideBar';
 import { fetchArtistTracks } from '../../store/artist-tracks-slice';
 
 
+/**
+ * A functional component to render the Tracks component of the Artist Feed
+ * @param {object} props 
+ * @returns 
+ */
 function ArtistFeedTracksPage(props) {
 
     const [tracks, setTracks] = useState([]);
@@ -16,34 +21,19 @@ function ArtistFeedTracksPage(props) {
     const [isSorted, setIsSorted] = useState(false);
     const artistTracks = useSelector((state) => state.artistTracks.tracks);
 
-    // for PROD
-    // useEffect(() => {
-    //     const sortedTracks=[...artistTracks];
-    //     sortedTracks.sort((a, b) => {
-    //         const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-    //         const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-    //         if (nameA < nameB) {
-    //           return -1;
-    //         }
-    //         if (nameA > nameB) {
-    //           return 1;
-    //         }
-    //         // names must be equal
-    //         return 0;
-    //       })
-    //     setTracks(sortedTracks);
-    // },[artistTracks]);
 
-    //NEEDS TO BE REMOVED
-    //for test purposes i am fetching the tracks here.
-    const dispatch = useDispatch();
+    //FOR DEVELOPMENT/TESTING PURPOSE
+    //for test purposes i am fetching the tracks here by hardcoding an artist spotify id
+    // const dispatch = useDispatch();
     // useEffect(() => {
-    //     dispatch(fetchArtistTracks());
+    //     dispatch(fetchArtistTracks("0TnOYISbd1XYRBk9myaseg"));
     // }, []);
 
-    //NEEDS TO BE REMOVED
-    //for test purposes
-    //sorting the tracks i get from artistTracks
+  
+    /**
+     * artistTracks would be available as we are fetching the artist tracks when the user logs in.
+     * Therefore, this effect would run only once (because artistTracks won't change) i.e. when the component is rendered.
+     */
     useEffect(() => {
         const sortedTracks = [...artistTracks];
         sortedTracks.sort((a, b) => {

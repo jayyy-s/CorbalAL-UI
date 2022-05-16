@@ -1,11 +1,15 @@
 import classes from './css/CuratorRespondBidFormComponent.module.css';
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateCuratorBid } from '../store/curator-bids-slice';
 import { endPoint } from '../config';
 import CloseIcon from '@mui/icons-material/Close';
 
-
+/**
+ * A functional component that renders the re-negotiation form.
+ * @param {object} props 
+ * @returns 
+ */
 function CuratorRespondBidFormComponent(props) {
 
     const [enteredPlaylistSpot, setPlaylistSpot] = useState(props.bid.playlist_spot);
@@ -15,7 +19,9 @@ function CuratorRespondBidFormComponent(props) {
 
     const dispatch = useDispatch();
 
-    //fetching the artist response if one exists
+    /**
+     * This effect is to fetch a response of the artist to the bid if one exists.
+     */
     useEffect(() => {
 
         const getResponse = async () => {
@@ -54,6 +60,10 @@ function CuratorRespondBidFormComponent(props) {
 
     }, [props])
 
+    /**
+     * An event listener to run when the accept button is clicked.
+     * @param {object} event 
+     */
     const handleAcceptBtnOnClick = async (event) => {
         event.preventDefault();
 
@@ -67,6 +77,10 @@ function CuratorRespondBidFormComponent(props) {
         props.closeBidForm();
     }
 
+    /**
+     * An event listener to run when the submit button is clicked.
+     * @param {object} event 
+     */
     const handleRenegotiateFormSubmit = async (event) => {
         event.preventDefault();
 

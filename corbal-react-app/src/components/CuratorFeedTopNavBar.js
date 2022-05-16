@@ -1,6 +1,11 @@
 import classes from './css/CuratorFeedTopNavBar.module.css'
 import { NavLink } from "react-router-dom";
 
+/**
+ * A functional component to render the top navigation bar for the Curator Feed.
+ * @param {object} props 
+ * @returns 
+ */
 function CuratorFeedTopNavBar(props){
    return( 
        <>

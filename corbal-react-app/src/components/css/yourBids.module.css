@@ -6,13 +6,13 @@
   justify-content: space-between;
 }
 
-.your-bids-text {
+.your_bids_text {
   font-size: 30px;
   font-weight: bold;
   color: white;
 }
 
-.your-bids-wrapper{
+.your_bids_wrapper{
   display:flex;
   flex-direction: row;
   justify-content:space-between;
@@ -20,7 +20,7 @@
   gap:20px;
 }
 
-.bid-info{
+.bid_info{
   display:flex;
   flex-direction: row;
   flex-grow:2;
@@ -41,7 +41,7 @@
   text-align:center;
 } */
 
-.view-all-button{
+.view_all_button{
   margin:auto 0px;
 }
 
@@ -52,9 +52,9 @@
   color: white;
 }
 
-.view-all-link,
-.view-all-link:focus,
-.view-all-link:active {
+.view_all_link,
+.view_all_link:focus,
+.view_all_link:active {
   text-decoration: none;
   font-size: 22px;
   width: 100%;
@@ -69,6 +69,6 @@
 }
 
 
-.view-all-link:hover {
+.view_all_link:hover {
   color: var(--main-color);
 }

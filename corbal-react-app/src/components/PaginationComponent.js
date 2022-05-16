@@ -1,6 +1,15 @@
 import classes from '../components/css/PaginationComponent.module.css';
 import { useState } from 'react';
 
+/**
+ * A reusable functional component to render data as a pagination component.
+ * The props object should have the following
+ * data - an array of items that needs to be displayed
+ * RenderComponent - the component that is rendered to display info for each item in the data array (usually a Card)
+ * dataLimit - the number of RenderComponents to be displayed
+ * handleOnClick - a function that is run when something is clicked in the RenderComponent
+ * @returns 
+ */
 function PaginationComponent({ data, RenderComponent, dataLimit , handleOnClick}) {
 
 
@@ -45,9 +54,6 @@ function PaginationComponent({ data, RenderComponent, dataLimit , handleOnClick}
                     getPaginatedData().map((item, index) => (<RenderComponent key={item.id} data={item} onClick={handleOnClick}/>))
                 }
             </div>
-            {/* <div>
-                <img src={require('../../assets/RightArrow.svg')} />
-            </div> */}
             {rightVisible && <svg width="75" height="75" viewBox="0 0 72 141" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={goToNextPage}>
                 <path d="M0.515015 0.485001L50.755 50.125L71.255 70.375L50.755 90.625L30.265 70.375L0.515015 40.985L0.515015 0.485001Z" fill="#EDECF4" />
                 <path d="M50.755 50.1251L71.255 70.3751L50.755 90.6251L0.515015 140.255L0.515015 99.7651L30.265 70.3751L50.755 50.1251Z" fill="url(#paint0_linear_1653_150)" />

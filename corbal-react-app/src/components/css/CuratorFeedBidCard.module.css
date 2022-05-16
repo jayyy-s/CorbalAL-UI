@@ -26,12 +26,14 @@
   right: 2px;
   border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .duration {
   font-size: x-small;
   position: relative;
-  left: 135px;
+  left: 150px;
+  width: fit-content;
 }
 
 .price {
