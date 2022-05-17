@@ -5,12 +5,24 @@ import { GENRES } from '../utilities/constants';
 import classes from '../components/css/PitchModalComponent.module.css';
 import CloseIcon from '@mui/icons-material/Close';
 import ReactDOM from 'react-dom';
+import {millisToMinutesAndSeconds} from '../utilities/functions';
 
 
+/**
+ * This is the backdrop for the modal
+ * @param {object} props 
+ * @returns 
+ */
 const Backdrop = (props) => {
     return <div className={classes.backdrop} />;
 };
 
+
+/**
+ * This is the Pitch a song form
+ * @param {object} props 
+ * @returns 
+ */
 const PitchModal = (props) => {
     const tracks = useSelector((state) => state.artistTracks.tracks);
 
@@ -69,13 +81,6 @@ const PitchModal = (props) => {
 
     const handlePitchOnSubmit = (event) => {
         event.preventDefault();
-        // "id": 1,
-        // "artist_id": 1,
-        // "song_id": "6Q4PYJtrq8CBx7YCY5IyRN",
-        // "song_name": "Party Ain't Over (feat. Usher & Afrojack)",
-        // "description": "Lorem ipsum dolor sit amet, consectetur adip",
-        // "genre": "Pop",
-        // "created_at": "2022-04-25 13:23:44"
 
         const today = new Date().toISOString();
         const date = today.split('T')[0];
@@ -96,12 +101,6 @@ const PitchModal = (props) => {
     const handleTrackChange = (event) => {
         const selectedTrack = tracks.filter((track) => track.id === event.currentTarget.value)[0];
         setSelectedTrack(selectedTrack);
-    }
-
-    const millisToMinutesAndSeconds = (millis) => {
-        var minutes = Math.floor(millis / 60000);
-        var seconds = ((millis % 60000) / 1000).toFixed(0);
-        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
 
     return (
@@ -162,6 +161,11 @@ const PitchModal = (props) => {
 
 }
 
+/**
+ * This is the pitch modal component that is comprised of hte PitchModal component and the Backdrop Component
+ * @param {object} props 
+ * @returns 
+ */
 function PitchModalComponent(props) {
     return (<>
         {ReactDOM.createPortal(

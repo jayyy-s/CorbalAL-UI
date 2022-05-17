@@ -1,10 +1,10 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
-import {
-    endPoint
-} from '../config';
+import { createSlice } from '@reduxjs/toolkit';
+import { endPoint } from '../config';
 
+/**
+ * This slice is used to fetch all the pitches in the ecosystem.
+ * It is needed to display the pitches in the Music Component of the Curator Feed.
+ */
 const allPitchesSlice = createSlice({
     name: 'allPitches',
     initialState: {
@@ -24,9 +24,6 @@ export const pitchesActions = allPitchesSlice.actions;
 export const fetchPitches = () => {
     return async (dispatch) => {
 
-        //GET Request
-        //Currently we are getting all the tracks.
-        //Ideally we will be sending a request to '/tracks?artistId=1' to obtain only the artist's tracks.
         const getPitchesRequest = async () => {
             const response = await fetch(
                 `${endPoint}/pitches`

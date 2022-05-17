@@ -1,10 +1,9 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
-import {
-    endPoint
-} from '../config';
+import { createSlice } from '@reduxjs/toolkit';
+import { endPoint } from '../config';
 
+/**
+ * This slice is used to fetch the logged in artist's tracks.
+ */
 const artistTracksSlice = createSlice({
     name: 'artistTracks',
     initialState: {

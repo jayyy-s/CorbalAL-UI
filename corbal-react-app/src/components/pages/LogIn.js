@@ -8,9 +8,6 @@ import { useState,useEffect} from "react";
 import { useSelector,useDispatch} from 'react-redux';
 import { fetchUser} from '../../store/user-slice';
 
-// login script
-import loginAuthentication from "../../scripts/loginAuth";
-
 /**
  * Dummy login page to login as an artist or curator.
  * Used only for development purposes.

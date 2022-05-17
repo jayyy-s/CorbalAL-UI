@@ -1,7 +1,6 @@
 import {useState} from "react";
 import "./css/userCard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import PitchModal from "./PitchModal";
 
 
 function UserCard(props) {
@@ -28,19 +27,7 @@ function UserCard(props) {
       </div>
       <div className="pitch-wrapper">
         <div className="pitch-container">
-          {/* <p className="pitch-title">Pitch a Song</p> */}
           <button className="btn-pitch" onClick={props.handleOpenPitchModal}>Pitch a Song</button>
-          {/* <div className="pitch-button-container">
-            <button
-              className="pitch-button-container"
-              onClick={props.handleOpenPitchModal}>
-              <p>+</p>
-            </button>
-            {/* {openPitchModal &&
-              <PitchModal
-                closePitchModal={setOpenPitchModal}
-                src={props.src} />} }
-          </div> */}
         </div>
       </div>
     </div>

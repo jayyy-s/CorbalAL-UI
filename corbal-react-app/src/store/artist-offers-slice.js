@@ -1,24 +1,16 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
-import {
-    endPoint
-} from '../config';
+import { createSlice } from '@reduxjs/toolkit';
+import { endPoint } from '../config';
 
+/**
+ * This slice is used to fetch the logged in artist's offers.
+ */
 const artistOffersSlice = createSlice({
     name: 'artistOffers',
     initialState: {
-        offers: [],
-        noOfCompletedOffers: 0,
-        noOfPendingOffers: 0
+        offers: []
     },
     reducers: {
         fetchArtistOffers(state, action) {
-            //need to update the below two to reflect the actual number
-            state.noOfCompletedOffers = 0;
-            state.noOfPendingOffers = 0;
-
-
             state.offers = action.payload.offers;
         },
         updateArtistOffer(state,action){
@@ -69,6 +61,11 @@ export const fetchArtistOffers = (artistId) => {
     };
 };
 
+/**
+ * A function to update a offer/bid in the DB and update the state of the application
+ * @param {object} offer 
+ * @returns 
+ */
 export const updateArtistOffer = (offer)=>{
     return async (dispatch) => {
 

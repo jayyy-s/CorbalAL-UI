@@ -1,10 +1,9 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
-import {
-    endPoint
-} from '../config';
+import { createSlice } from '@reduxjs/toolkit';
+import { endPoint } from '../config';
 
+/**
+ * This slice represents the curator's playlists
+ */
 const curatorPlaylistsSlice = createSlice({
     name: 'curatorPlaylists',
     initialState: {

@@ -1,24 +1,16 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
-import {
-    endPoint
-} from '../config';
+import { createSlice } from '@reduxjs/toolkit';
+import { endPoint } from '../config';
 
+/**
+ * This slice of the state represents the bids of the logged in curator.
+ */
 const curatorBidsSlice = createSlice({
     name: 'curatorBids',
     initialState: {
-        bids: [],
-        noOfCompletedBids: 0,
-        noOfPendingBids: 0
+        bids: []
     },
     reducers: {
         fetchCuratorBids(state, action) {
-            //need to update the below two to reflect the actual number
-            state.noOfCompletedBids = 0;
-            state.noOfPendingBids = 0;
-
-
             state.bids = action.payload.bids;
         },
         postCuratorBid(state,action){
@@ -72,7 +64,11 @@ export const fetchCuratorBids = (curatorId) => {
     };
 };
 
-
+/**
+ * This method is to update a bid in the DB and update the state of the application
+ * @param {object} bid 
+ * @returns 
+ */
 export const postCuratorBid = (bid) => {
     return async (dispatch) => {
 

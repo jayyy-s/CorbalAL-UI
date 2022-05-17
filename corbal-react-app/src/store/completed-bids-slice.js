@@ -1,9 +1,5 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
-import {
-    endPoint
-} from '../config';
+import { createSlice } from '@reduxjs/toolkit';
+import { endPoint } from '../config';
 
 const completedBidsSlice = createSlice({
     name: 'completedBids',
@@ -44,7 +40,8 @@ export const fetchCompletedBids = () => {
         try {
             const allBids = await getCompletedBidsRequest();
             
-             const bids = allBids.filter(bid =>bid.status==="Completed");
+            //This filtering should ideally be done in the backend
+            const bids = allBids.filter(bid =>bid.status==="Completed");
 
             dispatch(
                 completedBidsActions.fetchCompletedBids({

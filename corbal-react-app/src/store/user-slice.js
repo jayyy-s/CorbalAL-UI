@@ -1,11 +1,10 @@
-import {
-    createSlice
-} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-import {
-    endPoint
-} from '../config'
+import { endPoint } from '../config'
 
+/**
+ * This slice represents the logged in user.
+ */
 const userSlice = createSlice({
     name: 'userSlice',
     initialState: {
