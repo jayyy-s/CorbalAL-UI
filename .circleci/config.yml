@@ -10,7 +10,6 @@ jobs:
       - checkout
       - run:
           command: |
-            export CI = false
             npm install
             npm run build
           name: Build app
